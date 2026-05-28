@@ -1,0 +1,105 @@
+{
+  "id": "you-tiantaishan-riji",
+  "title": "游天台山日记",
+  "sourceNote": "样章用于演示结构与交互；正式底本待用户提供后替换校订。",
+  "assetBase": "/content/assets/you-tiantaishan-riji",
+  "intro": "《游天台山日记》是徐霞客早期山水游记名篇之一，约作于明万历四十一年（1613）。文章记录作者入天台、访国清、登山探胜的经过，体现了晚明士人亲历山川、以步履求真的旅行精神，也开启了《徐霞客游记》中精密观察自然地理与人文胜迹的典型写法。",
+  "parts": [
+    {
+      "id": "ytts-part-01",
+      "heading": "第一部分：入山访寺，初见天台",
+      "paragraphs": [
+        {
+          "id": "ytts-p01",
+          "scene": "晓行山寺",
+          "shareImage": "/content/assets/you-tiantaishan-riji/images/yxsk-p01.svg",
+          "ambientAudio": "/content/assets/you-tiantaishan-riji/audio/ambient-mountain.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-classic.wav",
+            "female_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-classic.wav",
+            "male_calm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-calm.wav",
+            "female_warm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "ytts-p01-s01",
+              "original": "癸丑之三月晦，自宁海出西门。",
+              "translation": "**万历四十一年三月末日**，我从宁海县城西门出发。",
+              "keywords": ["万历四十一年", "宁海"]
+            },
+            {
+              "pairId": "ytts-p01-s02",
+              "original": "云散日朗，人意山光，俱有喜色。",
+              "translation": "云气散开，阳光明亮，人的心情与山间景色，仿佛都带着欣然的光彩。",
+              "keywords": ["云散", "山光"]
+            },
+            {
+              "pairId": "ytts-p01-s03",
+              "original": "行十五里，至梁隍山，闻溪声出林际。",
+              "translation": "走了约十五里，到达**梁隍山**，听见溪水声从树林深处传来。",
+              "keywords": ["梁隍山", "溪声"]
+            }
+          ]
+        },
+        {
+          "id": "ytts-p02",
+          "scene": "古寺松风",
+          "shareImage": "/content/assets/you-tiantaishan-riji/images/yxsk-p02.svg",
+          "ambientAudio": "/content/assets/you-tiantaishan-riji/audio/ambient-temple.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p02-male-classic.wav",
+            "female_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p02-female-classic.wav",
+            "male_calm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p02-male-calm.wav",
+            "female_warm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p02-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "ytts-p02-s01",
+              "original": "又十里，宿于弥陀庵。",
+              "translation": "又走十里，当晚投宿在**弥陀庵**。",
+              "keywords": ["弥陀庵"]
+            },
+            {
+              "pairId": "ytts-p02-s02",
+              "original": "夜闻松声如涛，觉身已在尘表。",
+              "translation": "夜里听见松涛起伏，好像海浪翻涌，顿觉自己已经离开尘世喧嚣。",
+              "keywords": ["松声", "尘表"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ytts-part-02",
+      "heading": "第二部分：循溪登岭，山势渐奇",
+      "paragraphs": [
+        {
+          "id": "ytts-p03",
+          "scene": "溪桥登岭",
+          "shareImage": "/content/assets/you-tiantaishan-riji/images/yxsk-p03.svg",
+          "ambientAudio": "/content/assets/you-tiantaishan-riji/audio/ambient-stream.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p03-male-classic.wav",
+            "female_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p03-female-classic.wav",
+            "male_calm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p03-male-calm.wav",
+            "female_warm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p03-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "ytts-p03-s01",
+              "original": "明发，循溪而上，石梁横跨，两崖削立。",
+              "translation": "第二天清晨出发，沿溪而上，只见**石梁横跨溪谷**，两侧山崖像被刀削般直立。",
+              "keywords": ["石梁", "两崖"]
+            },
+            {
+              "pairId": "ytts-p03-s02",
+              "original": "水从梁下喷薄，声震林壑。",
+              "translation": "溪水从石梁下奔涌而出，水声震动树林与山谷。",
+              "keywords": ["水声", "林壑"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

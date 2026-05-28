@@ -1,0 +1,36 @@
+{
+  "title": "徐霞客游记",
+  "description": "以完整目录架构承载《徐霞客游记》的原文、现代译文、句级对照、朗读与分享素材。",
+  "volumes": [
+    {
+      "id": "vol-01",
+      "title": "游天台山日记",
+      "description": "万历四十一年癸丑之游，记天台山水与寺观行程。",
+      "articles": [
+        {
+          "id": "you-tiantaishan-riji",
+          "title": "游天台山日记",
+          "dynasty": "明",
+          "author": "徐霞客",
+          "status": "sample",
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": "vol-02",
+      "title": "游雁宕山日记",
+      "description": "记雁宕诸峰、寺院、瀑流与山行路程。",
+      "articles": [
+        {
+          "id": "you-yandangshan-riji",
+          "title": "游雁宕山日记",
+          "dynasty": "明",
+          "author": "徐霞客",
+          "status": "sample",
+          "order": 2
+        }
+      ]
+    }
+  ]
+}

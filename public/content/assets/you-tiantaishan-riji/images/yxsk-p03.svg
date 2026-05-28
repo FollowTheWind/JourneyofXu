@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="游天台山日记">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7f3e8"/>
+      <stop offset="0.58" stop-color="#dfe7dc"/>
+      <stop offset="1" stop-color="#c8d2bf"/>
+    </linearGradient>
+    <linearGradient id="mountain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#526a68"/>
+      <stop offset="1" stop-color="#26362f"/>
+    </linearGradient>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="3" seed="7"/>
+      <feColorMatrix type="saturate" values="0.22"/>
+      <feBlend mode="multiply" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#sky)"/>
+  <circle cx="930" cy="130" r="78" fill="#c74732" opacity="0.18"/>
+  <path d="M0 520 C135 420 205 430 325 300 C430 185 535 340 650 245 C770 145 850 310 970 220 C1080 138 1140 220 1200 170 L1200 720 L0 720 Z" fill="url(#mountain)" opacity="0.92"/>
+  <path d="M0 590 C155 530 235 555 360 455 C475 360 610 510 760 405 C900 300 1020 410 1200 330 L1200 720 L0 720 Z" fill="#1f2d29" opacity="0.58"/>
+  <path d="M116 620 C270 566 394 634 540 570 C670 512 762 585 900 532 C1035 482 1110 518 1200 472 L1200 720 L0 720 L0 665 C35 650 73 636 116 620 Z" fill="#f7f3e8" opacity="0.62"/>
+  <path d="M742 221 C730 350 705 463 660 590" stroke="#f8fbf5" stroke-width="12" opacity="0.72" fill="none" stroke-linecap="round"/>
+  <path d="M742 222 C750 356 772 456 820 578" stroke="#f8fbf5" stroke-width="5" opacity="0.45" fill="none" stroke-linecap="round"/>
+  <g transform="translate(84 86)">
+    <rect x="0" y="0" width="440" height="150" rx="6" fill="#f8f4e9" opacity="0.82"/>
+    <text x="32" y="62" font-size="42" font-family="Georgia, 'Songti SC', serif" fill="#17201c">游天台山日记</text>
+    <text x="34" y="108" font-size="24" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" fill="#8d2f24">溪桥登岭</text>
+  </g>
+  <rect width="1200" height="720" fill="transparent" filter="url(#paper)" opacity="0.22"/>
+</svg>

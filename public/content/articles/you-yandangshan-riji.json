@@ -1,0 +1,67 @@
+{
+  "id": "you-yandangshan-riji",
+  "title": "游雁宕山日记",
+  "sourceNote": "样章用于演示结构与交互；正式底本待用户提供后替换校订。",
+  "assetBase": "/content/assets/you-yandangshan-riji",
+  "intro": "《游雁宕山日记》记述徐霞客访游雁宕山的路径、峰石、寺观与瀑泉。雁宕以奇峰怪石闻名，徐霞客以亲身登临与细密观察记录其形势，使文章不仅有文学性的景物铺陈，也具备山地地貌考察的价值。",
+  "parts": [
+    {
+      "id": "yands-part-01",
+      "heading": "第一部分：入谷望峰，奇势初开",
+      "paragraphs": [
+        {
+          "id": "yands-p01",
+          "scene": "雁宕峰影",
+          "shareImage": "/content/assets/you-yandangshan-riji/images/yands-p01.svg",
+          "ambientAudio": "/content/assets/you-yandangshan-riji/audio/ambient-valley.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-yandangshan-riji/audio/yands-p01-male-classic.wav",
+            "female_classic": "/content/assets/you-yandangshan-riji/audio/yands-p01-female-classic.wav",
+            "male_calm": "/content/assets/you-yandangshan-riji/audio/yands-p01-male-calm.wav",
+            "female_warm": "/content/assets/you-yandangshan-riji/audio/yands-p01-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yands-p01-s01",
+              "original": "自乐清入山，群峰森列，若屏若戟。",
+              "translation": "从**乐清**进入山中，只见群峰密密排列，有的像屏风，有的像长戟。",
+              "keywords": ["乐清", "群峰"]
+            },
+            {
+              "pairId": "yands-p01-s02",
+              "original": "仰视不见其巅，云气出没其间。",
+              "translation": "仰头望去，看不见峰顶，云气在山峰之间时隐时现。",
+              "keywords": ["峰顶", "云气"]
+            }
+          ]
+        },
+        {
+          "id": "yands-p02",
+          "scene": "瀑声入谷",
+          "shareImage": "/content/assets/you-yandangshan-riji/images/yands-p02.svg",
+          "ambientAudio": "/content/assets/you-yandangshan-riji/audio/ambient-waterfall.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-yandangshan-riji/audio/yands-p02-male-classic.wav",
+            "female_classic": "/content/assets/you-yandangshan-riji/audio/yands-p02-female-classic.wav",
+            "male_calm": "/content/assets/you-yandangshan-riji/audio/yands-p02-male-calm.wav",
+            "female_warm": "/content/assets/you-yandangshan-riji/audio/yands-p02-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yands-p02-s01",
+              "original": "转入深谷，瀑声先至，白练垂空。",
+              "translation": "转入深谷时，还未见瀑布，瀑声已经先传到耳边；再往前看，白色水流像长练一样从空中垂下。",
+              "keywords": ["深谷", "瀑布"]
+            },
+            {
+              "pairId": "yands-p02-s02",
+              "original": "岩花被湿，石径生寒。",
+              "translation": "岩壁上的花草被水雾打湿，石径也泛起清寒之意。",
+              "keywords": ["水雾", "石径"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
