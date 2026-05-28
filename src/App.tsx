@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import {
+  ArrowRight,
   BookOpen,
+  ChevronLeft,
   Headphones,
   ImageDown,
   Languages,
@@ -16,7 +18,9 @@ import { articleHash, parseHashRoute } from "./hashRoute";
 import { loadArticle, loadCatalog } from "./content";
 import type {
   Article,
+  CatalogArticle,
   Catalog,
+  CatalogVolume,
   Paragraph,
   ReadingMode,
   SelectedPassage,
@@ -24,10 +28,6 @@ import type {
 } from "./types";
 
 const savedArticleKey = "journey-of-xu:last-article";
-
-function firstCatalogArticle(catalog: Catalog) {
-  return catalog.volumes.flatMap((volume) => volume.articles)[0];
-}
 
 function findParagraph(article: Article | null, pairId?: string) {
   if (!article) {
@@ -43,6 +43,105 @@ function findParagraph(article: Article | null, pairId?: string) {
   return article.parts[0]?.paragraphs[0];
 }
 
+function flattenCatalog(catalog: Catalog) {
+  return catalog.volumes.flatMap((volume) =>
+    volume.articles.map((article) => ({
+      article,
+      volume,
+    })),
+  );
+}
+
+function articleStatusLabel(status: CatalogArticle["status"]) {
+  if (status === "complete") {
+    return "完整版";
+  }
+  if (status === "draft") {
+    return "整理中";
+  }
+  return "样章";
+}
+
+function HomePage({
+  catalog,
+  onSelectArticle,
+}: {
+  catalog: Catalog;
+  onSelectArticle: (articleId: string) => void;
+}) {
+  const entries = flattenCatalog(catalog);
+
+  return (
+    <section className="home-view" aria-label="首页">
+      <div className="home-hero">
+        <p className="eyebrow">明代山水行旅</p>
+        <h2>徐霞客游记</h2>
+        <p>
+          《徐霞客游记》以亲历山川为经，以日记笔法为纬，记录徐霞客数十年间的道路、山势、
+          水文、寺观与风土。它既是古典游记的高峰，也是中国地理观察传统中极具现场感的一部
+          作品。
+        </p>
+      </div>
+
+      <div className="home-overview" aria-label="阅读入口概览">
+        <div>
+          <span>{entries.length}</span>
+          <small>篇游记</small>
+        </div>
+        <div>
+          <span>句级</span>
+          <small>原文译文对照</small>
+        </div>
+        <div>
+          <span>声景</span>
+          <small>段落朗读</small>
+        </div>
+      </div>
+
+      <section className="entry-section" aria-label="选择游记文章">
+        <div className="section-heading">
+          <p className="eyebrow">选择篇目</p>
+          <h3>从一篇山水日记进入</h3>
+        </div>
+        <div className="entry-grid">
+          {entries.map(({ article, volume }) => (
+            <ArticleEntry
+              article={article}
+              key={article.id}
+              volume={volume}
+              onSelectArticle={onSelectArticle}
+            />
+          ))}
+        </div>
+      </section>
+    </section>
+  );
+}
+
+function ArticleEntry({
+  article,
+  volume,
+  onSelectArticle,
+}: {
+  article: CatalogArticle;
+  volume: CatalogVolume;
+  onSelectArticle: (articleId: string) => void;
+}) {
+  return (
+    <button className="entry-card" type="button" onClick={() => onSelectArticle(article.id)}>
+      <span className="entry-kicker">
+        {article.dynasty} · {article.author} · {articleStatusLabel(article.status)}
+      </span>
+      <strong>{article.title}</strong>
+      <span>{volume.description}</span>
+      <span className="entry-action">
+        开始阅读
+        <ArrowRight size={17} />
+      </span>
+    </button>
+  );
+}
+
 export default function App() {
   const [catalog, setCatalog] = useState<Catalog | null>(null);
   const [article, setArticle] = useState<Article | null>(null);
@@ -53,7 +152,7 @@ export default function App() {
   const [voice, setVoice] = useState<VoiceKey>("male_classic");
   const [ambientEnabled, setAmbientEnabled] = useState(true);
   const [selectedPassage, setSelectedPassage] = useState<SelectedPassage | null>(null);
-  const [isCatalogOpen, setIsCatalogOpen] = useState(true);
+  const [isCatalogOpen, setIsCatalogOpen] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -61,15 +160,12 @@ export default function App() {
       .then((nextCatalog) => {
         setCatalog(nextCatalog);
         const route = parseHashRoute();
-        const firstArticle = firstCatalogArticle(nextCatalog);
-        const savedArticle = localStorage.getItem(savedArticleKey) ?? undefined;
-        const initialArticleId = route.articleId ?? savedArticle ?? firstArticle?.id;
-        if (initialArticleId) {
-          setActiveArticleId(initialArticleId);
+        if (route.articleId) {
+          setActiveArticleId(route.articleId);
           setHighlightedPairId(route.pairId);
-          if (!route.articleId) {
-            window.history.replaceState(null, "", articleHash(initialArticleId));
-          }
+        } else {
+          setActiveArticleId(undefined);
+          setHighlightedPairId(undefined);
         }
       })
       .catch((loadError) => setError(loadError.message));
@@ -80,6 +176,8 @@ export default function App() {
       const route = parseHashRoute();
       if (route.articleId) {
         setActiveArticleId(route.articleId);
+      } else {
+        setActiveArticleId(undefined);
       }
       setHighlightedPairId(route.pairId);
     }
@@ -89,6 +187,8 @@ export default function App() {
 
   useEffect(() => {
     if (!activeArticleId) {
+      setArticle(null);
+      setSelectedPassage(null);
       return;
     }
     setArticle(null);
@@ -118,9 +218,18 @@ export default function App() {
     setActiveArticleId(articleId);
     setHighlightedPairId(undefined);
     window.location.hash = articleHash(articleId);
+    window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "smooth" }));
     if (window.innerWidth < 920) {
       setIsCatalogOpen(false);
     }
+  }, []);
+
+  const handleHomeSelect = useCallback(() => {
+    setActiveArticleId(undefined);
+    setHighlightedPairId(undefined);
+    setSelectedPassage(null);
+    window.history.pushState(null, "", window.location.pathname + window.location.search);
+    window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "smooth" }));
   }, []);
 
   const handlePairFocus = useCallback(
@@ -146,10 +255,10 @@ export default function App() {
         >
           {isCatalogOpen ? <PanelLeftClose size={20} /> : <Menu size={20} />}
         </button>
-        <div>
+        <button className="brand-button" type="button" onClick={handleHomeSelect}>
           <p className="eyebrow">山水游记阅读器</p>
           <h1>徐霞客游记</h1>
-        </div>
+        </button>
         <div className="topbar-meta" aria-label="功能概览">
           <span title="原文译文对照">
             <Languages size={17} /> 对照
@@ -165,7 +274,11 @@ export default function App() {
 
       {error ? <div className="error-banner">{error}</div> : null}
 
-      <div className={`workspace ${isCatalogOpen ? "catalog-visible" : ""}`}>
+      <div
+        className={`workspace ${activeArticleId ? "reader-mode" : "home-mode"} ${
+          isCatalogOpen ? "catalog-visible" : ""
+        }`}
+      >
         {catalog ? (
           <CatalogPanel
             catalog={catalog}
@@ -176,18 +289,22 @@ export default function App() {
         ) : null}
 
         <section className="reader-column" aria-label="阅读区">
-          <ReadingSettings
-            mode={mode}
-            fontScale={fontScale}
-            voice={voice}
-            ambientEnabled={ambientEnabled}
-            onModeChange={setMode}
-            onFontScaleChange={setFontScale}
-            onVoiceChange={setVoice}
-            onAmbientEnabledChange={setAmbientEnabled}
-          />
+          {activeArticleId ? (
+            <ReadingSettings
+              mode={mode}
+              fontScale={fontScale}
+              voice={voice}
+              ambientEnabled={ambientEnabled}
+              onModeChange={setMode}
+              onFontScaleChange={setFontScale}
+              onVoiceChange={setVoice}
+              onAmbientEnabledChange={setAmbientEnabled}
+            />
+          ) : null}
 
-          {article ? (
+          {!activeArticleId && catalog ? (
+            <HomePage catalog={catalog} onSelectArticle={handleArticleSelect} />
+          ) : article ? (
             <ArticleReader
               article={article}
               highlightedPairId={highlightedPairId}
@@ -204,14 +321,20 @@ export default function App() {
           )}
         </section>
 
-        <aside className="tool-column" aria-label="音频与分享工具">
-          <AudioPlayer
-            paragraph={activeParagraph as Paragraph | undefined}
-            voice={voice}
-            ambientEnabled={ambientEnabled}
-          />
-          <ShareImageComposer selectedPassage={selectedPassage} />
-        </aside>
+        {activeArticleId ? (
+          <aside className="tool-column" aria-label="音频与分享工具">
+            <button className="back-home" type="button" onClick={handleHomeSelect}>
+              <ChevronLeft size={17} />
+              返回首页
+            </button>
+            <AudioPlayer
+              paragraph={activeParagraph as Paragraph | undefined}
+              voice={voice}
+              ambientEnabled={ambientEnabled}
+            />
+            <ShareImageComposer selectedPassage={selectedPassage} />
+          </aside>
+        ) : null}
       </div>
     </main>
   );
