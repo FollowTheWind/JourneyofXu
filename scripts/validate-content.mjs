@@ -63,11 +63,15 @@ function validateArticle(article, articlePath) {
       paragraphIds.add(paragraph.id);
 
       existsPublicAsset(paragraph.shareImage, `${label} shareImage`);
-      existsPublicAsset(paragraph.ambientAudio, `${label} ambientAudio`);
+      if (paragraph.ambientAudio) {
+        existsPublicAsset(paragraph.ambientAudio, `${label} ambientAudio`);
+      }
 
-      requiredVoices.forEach((voice) => {
-        existsPublicAsset(paragraph.voiceAudio?.[voice], `${label} voiceAudio.${voice}`);
-      });
+      if (paragraph.voiceAudio) {
+        requiredVoices.forEach((voice) => {
+          existsPublicAsset(paragraph.voiceAudio[voice], `${label} voiceAudio.${voice}`);
+        });
+      }
 
       if (!Array.isArray(paragraph.pairs) || paragraph.pairs.length === 0) {
         errors.push(`${label} must contain at least one original/translation pair`);

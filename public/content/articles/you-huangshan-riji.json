@@ -13,13 +13,6 @@
           "id": "yhsk-p01",
           "scene": "自白岳下山",
           "shareImage": "/content/assets/you-huangshan-riji/images/3-1.jpg",
-          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-mountain.wav",
-          "voiceAudio": {
-            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
-            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
-            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
-            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
-          },
           "pairs": [
             {
               "pairId": "yhsk-p01-s01",
@@ -100,13 +93,6 @@
           "id": "yhsk-p02",
           "scene": "汤泉浴雪",
           "shareImage": "/content/assets/you-huangshan-riji/images/3-1.jpg",
-          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-stream.wav",
-          "voiceAudio": {
-            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
-            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
-            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
-            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
-          },
           "pairs": [
             {
               "pairId": "yhsk-p02-s09",
@@ -190,13 +176,6 @@
           "id": "yhsk-p03",
           "scene": "听雪溜竟日",
           "shareImage": "/content/assets/you-huangshan-riji/images/3-1.jpg",
-          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-snow.wav",
-          "voiceAudio": {
-            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
-            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
-            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
-            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
-          },
           "pairs": [
             {
               "pairId": "yhsk-p03-s17",
@@ -219,13 +198,6 @@
           "id": "yhsk-p04",
           "scene": "慈光受阻",
           "shareImage": "/content/assets/you-huangshan-riji/images/3-2.jpg",
-          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-snow.wav",
-          "voiceAudio": {
-            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
-            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
-            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
-            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
-          },
           "pairs": [
             {
               "pairId": "yhsk-p04-s18",
@@ -281,13 +253,6 @@
           "id": "yhsk-p05",
           "scene": "凿冰登天门",
           "shareImage": "/content/assets/you-huangshan-riji/images/3-2.jpg",
-          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-snow.wav",
-          "voiceAudio": {
-            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
-            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
-            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
-            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
-          },
           "pairs": [
             {
               "pairId": "yhsk-p05-s23",
@@ -379,13 +344,6 @@
           "id": "yhsk-p06",
           "scene": "光明顶石笋矼",
           "shareImage": "/content/assets/you-huangshan-riji/images/3-3.jpg",
-          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-mountain.wav",
-          "voiceAudio": {
-            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
-            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
-            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
-            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
-          },
           "pairs": [
             {
               "pairId": "yhsk-p06-s32",
@@ -570,13 +528,6 @@
           "id": "yhsk-p07",
           "scene": "扰龙松与松谷庵",
           "shareImage": "/content/assets/you-huangshan-riji/images/3-4.jpg",
-          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-stream.wav",
-          "voiceAudio": {
-            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
-            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
-            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
-            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
-          },
           "pairs": [
             {
               "pairId": "yhsk-p07-s52",
@@ -699,13 +650,6 @@
           "id": "yhsk-p08",
           "scene": "浓雾迷途",
           "shareImage": "/content/assets/you-huangshan-riji/images/3-4.jpg",
-          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-snow.wav",
-          "voiceAudio": {
-            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
-            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
-            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
-            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
-          },
           "pairs": [
             {
               "pairId": "yhsk-p08-s65",
@@ -735,13 +679,6 @@
           "id": "yhsk-p09",
           "scene": "翠微丹台",
           "shareImage": "/content/assets/you-huangshan-riji/images/3-4.jpg",
-          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-mountain.wav",
-          "voiceAudio": {
-            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
-            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
-            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
-            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
-          },
           "pairs": [
             {
               "pairId": "yhsk-p09-s67",
@@ -782,13 +719,6 @@
           "id": "yhsk-p10",
           "scene": "雨中炼丹台",
           "shareImage": "/content/assets/you-huangshan-riji/images/3-4.jpg",
-          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-stream.wav",
-          "voiceAudio": {
-            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
-            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
-            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
-            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
-          },
           "pairs": [
             {
               "pairId": "yhsk-p10-s70",
@@ -852,13 +782,6 @@
           "id": "yhsk-p11",
           "scene": "百步云梯",
           "shareImage": "/content/assets/you-huangshan-riji/images/3-4.jpg",
-          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-mountain.wav",
-          "voiceAudio": {
-            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
-            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
-            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
-            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
-          },
           "pairs": [
             {
               "pairId": "yhsk-p11-s76",
