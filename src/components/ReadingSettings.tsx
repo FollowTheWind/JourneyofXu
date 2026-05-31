@@ -1,15 +1,11 @@
-import { CaseSensitive, Columns2, Languages, Volume2 } from "lucide-react";
-import type { ReadingMode, VoiceKey } from "../types";
+import { CaseSensitive, Columns2, Languages } from "lucide-react";
+import type { ReadingMode } from "../types";
 
 interface ReadingSettingsProps {
   mode: ReadingMode;
   fontScale: number;
-  voice: VoiceKey;
-  ambientEnabled: boolean;
   onModeChange: (mode: ReadingMode) => void;
   onFontScaleChange: (scale: number) => void;
-  onVoiceChange: (voice: VoiceKey) => void;
-  onAmbientEnabledChange: (enabled: boolean) => void;
 }
 
 const modes: Array<{ value: ReadingMode; label: string; icon: typeof Columns2 }> = [
@@ -18,22 +14,11 @@ const modes: Array<{ value: ReadingMode; label: string; icon: typeof Columns2 }>
   { value: "translation", label: "译文", icon: Languages },
 ];
 
-const voices: Array<{ value: VoiceKey; label: string }> = [
-  { value: "male_classic", label: "男声·典雅" },
-  { value: "female_classic", label: "女声·典雅" },
-  { value: "male_calm", label: "男声·沉静" },
-  { value: "female_warm", label: "女声·温润" },
-];
-
 export function ReadingSettings({
   mode,
   fontScale,
-  voice,
-  ambientEnabled,
   onModeChange,
   onFontScaleChange,
-  onVoiceChange,
-  onAmbientEnabledChange,
 }: ReadingSettingsProps) {
   return (
     <section className="settings-bar" aria-label="阅读设置">
@@ -66,30 +51,6 @@ export function ReadingSettings({
           value={fontScale}
           onChange={(event) => onFontScaleChange(Number(event.target.value))}
         />
-      </label>
-
-      <label className="setting-field">
-        <Volume2 size={17} />
-        <select
-          aria-label="音色"
-          value={voice}
-          onChange={(event) => onVoiceChange(event.target.value as VoiceKey)}
-        >
-          {voices.map((item) => (
-            <option key={item.value} value={item.value}>
-              {item.label}
-            </option>
-          ))}
-        </select>
-      </label>
-
-      <label className="toggle-field">
-        <input
-          type="checkbox"
-          checked={ambientEnabled}
-          onChange={(event) => onAmbientEnabledChange(event.target.checked)}
-        />
-        <span>背景音</span>
       </label>
     </section>
   );

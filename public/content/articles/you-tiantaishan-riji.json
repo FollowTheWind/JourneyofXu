@@ -1,18 +1,18 @@
 {
   "id": "you-tiantaishan-riji",
   "title": "游天台山日记",
-  "sourceNote": "样章用于演示结构与交互；正式底本待用户提供后替换校订。",
+  "sourceNote": "全文底本，完整收录《游天台山日记》八大部分，含原文与现代汉语逐句翻译。",
   "assetBase": "/content/assets/you-tiantaishan-riji",
-  "intro": "《游天台山日记》是徐霞客早期山水游记名篇之一，约作于明万历四十一年（1613）。文章记录作者入天台、访国清、登山探胜的经过，体现了晚明士人亲历山川、以步履求真的旅行精神，也开启了《徐霞客游记》中精密观察自然地理与人文胜迹的典型写法。",
+  "intro": "《游天台山日记》是《徐霞客游记》的开篇之作，作于明万历四十一年（1613年）。文章记录作者自宁海出发，入天台、访国清、登华顶、探寒岩的完整经过，文笔清丽，观察精微，开启了中国古代地理考察文学的典型写法。这也是”中国旅游日”（5月19日）的由来。",
   "parts": [
     {
       "id": "ytts-part-01",
-      "heading": "第一部分：入山访寺，初见天台",
+      "heading": "第一部分：宁海出发，初入台山",
       "paragraphs": [
         {
           "id": "ytts-p01",
-          "scene": "晓行山寺",
-          "shareImage": "/content/assets/you-tiantaishan-riji/images/yxsk-p01.svg",
+          "scene": "云散日朗",
+          "shareImage": "/content/assets/you-tiantaishan-riji/images/1-1.jpeg",
           "ambientAudio": "/content/assets/you-tiantaishan-riji/audio/ambient-mountain.wav",
           "voiceAudio": {
             "male_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-classic.wav",
@@ -24,27 +24,44 @@
             {
               "pairId": "ytts-p01-s01",
               "original": "癸丑之三月晦，自宁海出西门。",
-              "translation": "**万历四十一年三月末日**，我从宁海县城西门出发。",
-              "keywords": ["万历四十一年", "宁海"]
+              "translation": "**明万历四十一年（1613年）**农历三月的最后一天，我从宁海县城的西门出发。",
+              "keywords": [
+                "万历四十一年",
+                "宁海"
+              ]
             },
             {
               "pairId": "ytts-p01-s02",
-              "original": "云散日朗，人意山光，俱有喜色。",
-              "translation": "云气散开，阳光明亮，人的心情与山间景色，仿佛都带着欣然的光彩。",
-              "keywords": ["云散", "山光"]
+              "original": "云散日朗，人意山光，俱有喜态。",
+              "translation": "当时乌云散去，阳光明媚，人的心情和山中的风光都带着喜悦的神态。",
+              "keywords": [
+                "云散",
+                "山光"
+              ]
             },
             {
               "pairId": "ytts-p01-s03",
-              "original": "行十五里，至梁隍山，闻溪声出林际。",
-              "translation": "走了约十五里，到达**梁隍山**，听见溪水声从树林深处传来。",
-              "keywords": ["梁隍山", "溪声"]
+              "original": "三十里，至梁隍山。",
+              "translation": "走了三十里路，到达**梁隍山**。",
+              "keywords": [
+                "梁隍山"
+              ]
+            },
+            {
+              "pairId": "ytts-p01-s04",
+              "original": "闻此於菟夹道，月伤数十人，遂止宿。",
+              "translation": "听说这里有老虎在道路两旁出没，一个月内伤害了几十个人，于是我便停下来住宿。",
+              "keywords": [
+                "於菟",
+                "止宿"
+              ]
             }
           ]
         },
         {
           "id": "ytts-p02",
-          "scene": "古寺松风",
-          "shareImage": "/content/assets/you-tiantaishan-riji/images/yxsk-p02.svg",
+          "scene": "雨后新霁",
+          "shareImage": "/content/assets/you-tiantaishan-riji/images/1-1.jpeg",
           "ambientAudio": "/content/assets/you-tiantaishan-riji/audio/ambient-temple.wav",
           "voiceAudio": {
             "male_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p02-male-classic.wav",
@@ -55,15 +72,53 @@
           "pairs": [
             {
               "pairId": "ytts-p02-s01",
-              "original": "又十里，宿于弥陀庵。",
-              "translation": "又走十里，当晚投宿在**弥陀庵**。",
-              "keywords": ["弥陀庵"]
+              "original": "四月初一日，早雨。",
+              "translation": "四月初一这一天，清晨下起了雨。",
+              "keywords": [
+                "四月初一"
+              ]
             },
             {
               "pairId": "ytts-p02-s02",
-              "original": "夜闻松声如涛，觉身已在尘表。",
-              "translation": "夜里听见松涛起伏，好像海浪翻涌，顿觉自己已经离开尘世喧嚣。",
-              "keywords": ["松声", "尘表"]
+              "original": "行十五里，路有岐，马首西向台山，天色渐霁。",
+              "translation": "前行了十五里，路口出现了分岔，我们调转马头朝西向**天台山**方向前进，此时天色渐渐转晴。",
+              "keywords": [
+                "天台山"
+              ]
+            },
+            {
+              "pairId": "ytts-p02-s03",
+              "original": "又十里，抵松门岭，山峻路滑，舍骑步行。",
+              "translation": "又走了十里，抵达**松门岭**。这里山势险峻，道路湿滑，我们便放弃骑马，改为步行。",
+              "keywords": [
+                "松门岭"
+              ]
+            },
+            {
+              "pairId": "ytts-p02-s04",
+              "original": "自奉化来，虽越岭数重，皆循山麓；至此迂回临陟，俱在山脊。",
+              "translation": "从奉化一路走来，虽然翻越了几重山岭，但都是顺着山脚走的；到了这里，开始迂回曲折地登高，都是走在山脊线上。",
+              "keywords": [
+                "奉化",
+                "山脊"
+              ]
+            },
+            {
+              "pairId": "ytts-p02-s05",
+              "original": "而雨后新霁，泉声山色，往复创变，翠丛中山鹃映发，令人攀历忘苦。",
+              "translation": "由于是雨后初晴，泉水的声音和山峦的景色在行进中不断地创造出新的变化，翠绿的树丛中红色的**山杜鹃**交相辉映，让人在攀登经历中忘记了劳累和辛苦。",
+              "keywords": [
+                "雨后新霁",
+                "山鹃"
+              ]
+            },
+            {
+              "pairId": "ytts-p02-s06",
+              "original": "又十五里，饭于筋竹庵。",
+              "translation": "又走了十五里，在**筋竹庵**吃了饭。",
+              "keywords": [
+                "筋竹庵"
+              ]
             }
           ]
         }
@@ -71,12 +126,12 @@
     },
     {
       "id": "ytts-part-02",
-      "heading": "第二部分：循溪登岭，山势渐奇",
+      "heading": "第二部分：经弥陀庵，宿国清寺",
       "paragraphs": [
         {
           "id": "ytts-p03",
-          "scene": "溪桥登岭",
-          "shareImage": "/content/assets/you-tiantaishan-riji/images/yxsk-p03.svg",
+          "scene": "越岭问路",
+          "shareImage": "/content/assets/you-tiantaishan-riji/images/1-1.jpeg",
           "ambientAudio": "/content/assets/you-tiantaishan-riji/audio/ambient-stream.wav",
           "voiceAudio": {
             "male_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p03-male-classic.wav",
@@ -87,15 +142,782 @@
           "pairs": [
             {
               "pairId": "ytts-p03-s01",
-              "original": "明发，循溪而上，石梁横跨，两崖削立。",
-              "translation": "第二天清晨出发，沿溪而上，只见**石梁横跨溪谷**，两侧山崖像被刀削般直立。",
-              "keywords": ["石梁", "两崖"]
+              "original": "山顶旧有庵，僧云：“由此六七里，右折登大岭，为国清大路；直行穿堍下，由筋竹岭过去，路险恶，出人少，然是由华顶径路。“余兼从之。",
+              "translation": "山顶上原来建有庙宇，那里的和尚说：“从这里走六七里路，向右转登上大岭，是去国清寺的大路；如果一直往前穿过山脚，从筋竹岭翻过去，路途险恶，走的人很少，但这是去**华顶峰**的近路。“这两条路我都要走，不过这次我听从了他的建议走近路。",
+              "keywords": [
+                "问路",
+                "华顶"
+              ]
             },
             {
               "pairId": "ytts-p03-s02",
-              "original": "水从梁下喷薄，声震林壑。",
-              "translation": "溪水从石梁下奔涌而出，水声震动树林与山谷。",
-              "keywords": ["水声", "林壑"]
+              "original": "遂越筋竹岭。",
+              "translation": "于是翻越了**筋竹岭**。",
+              "keywords": [
+                "筋竹岭"
+              ]
+            },
+            {
+              "pairId": "ytts-p03-s03",
+              "original": "岭旁多短松，老干虬枝，盘结婆娑，丛条郁茂，浓绿迎人。",
+              "translation": "山岭旁长着许多矮小的松树，树干苍老，枝条弯曲如龙，盘旋交错，枝叶茂盛，浓郁的绿色迎面扑来。",
+              "keywords": [
+                "短松",
+                "虬枝"
+              ]
+            },
+            {
+              "pairId": "ytts-p03-s04",
+              "original": "岭高且长，后有百步峻，盘砥颇险。",
+              "translation": "这道岭又高又长，后段还有一段叫做”百步峻”的陡坡，盘旋的岩石非常险峻。",
+              "keywords": [
+                "百步峻"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ytts-p04",
+          "scene": "暮宿国清",
+          "shareImage": "/content/assets/you-tiantaishan-riji/images/1-4.jpeg",
+          "ambientAudio": "/content/assets/you-tiantaishan-riji/audio/ambient-temple.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-classic.wav",
+            "female_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-classic.wav",
+            "male_calm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-calm.wav",
+            "female_warm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "ytts-p04-s01",
+              "original": "下岭，五里，至弥陀庵。香路旧由此趋华顶，今舍大路，荒草纵横。",
+              "translation": "下了山岭，走五里路，到达**弥陀庵**。过去进香的路都是从这里通往华顶峰的，如今人们改走大路，这里已经是荒草丛生。",
+              "keywords": [
+                "弥陀庵"
+              ]
+            },
+            {
+              "pairId": "ytts-p04-s02",
+              "original": "又五里，过溪。溪水激石，鸣声甚宏，所谓小九鲤也。",
+              "translation": "又走了五里，穿过一条溪流。溪水撞击着石头，发出宏大的声响，这就是人们所说的**小九鲤**瀑布。",
+              "keywords": [
+                "小九鲤"
+              ]
+            },
+            {
+              "pairId": "ytts-p04-s03",
+              "original": "又五里，抵发僧庵。其地为天台前门，两山夹峙，中唯大溪。僧结庵于溪上，筑基叠石，高与岩平，而正面直当两山之口。水从庵底激射而出，大有奔腾之势。",
+              "translation": "又走五里，抵达了**发僧庵**。这个地方是天台山的前门，两座大山对峙，中间只有一条大溪。和尚把庙宇建在溪流之上，地基是用石头层层堆砌起来的，高度与两旁的岩壁持平，而庵堂的正面正对着两座山的山口。溪水从庵堂的底部激射奔涌而出，大有万马奔腾的气势。",
+              "keywords": [
+                "发僧庵",
+                "天台前门"
+              ]
+            },
+            {
+              "pairId": "ytts-p04-s04",
+              "original": "是日自松门至此，四十里皆崇山峻岭。",
+              "translation": "这一天从松门岭到这里，四十里路全部是崇山峻岭。",
+              "keywords": [
+                "崇山峻岭"
+              ]
+            },
+            {
+              "pairId": "ytts-p04-s05",
+              "original": "暮色至，宿于国清寺。",
+              "translation": "黄昏时分，我们到达并住宿在**国清寺**。",
+              "keywords": [
+                "国清寺"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ytts-part-03",
+      "heading": "第三部分：登华顶峰，赏云海奇观",
+      "paragraphs": [
+        {
+          "id": "ytts-p05",
+          "scene": "幽寂高明",
+          "shareImage": "/content/assets/you-tiantaishan-riji/images/1-2.jpeg",
+          "ambientAudio": "/content/assets/you-tiantaishan-riji/audio/ambient-temple.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-classic.wav",
+            "female_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-classic.wav",
+            "male_calm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-calm.wav",
+            "female_warm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "ytts-p05-s01",
+              "original": "初二日，过螺蛳圈、七里彰，共三十里，至华顶之高明庵。",
+              "translation": "初二这一天，经过了螺蛳圈、七里彰，一共走了三十里，来到华顶峰的**高明庵**。",
+              "keywords": [
+                "高明庵"
+              ]
+            },
+            {
+              "pairId": "ytts-p05-s02",
+              "original": "其地前临大涧，后倚高屏，两旁翠微环绕，而庵居其中，最称幽寂。",
+              "translation": "这个地方前面临着一条大山涧，后面靠着像高大屏风一样的山壁，两旁翠绿的山峦环绕，庵堂坐落其中，最为**幽深静谧**。",
+              "keywords": [
+                "幽寂"
+              ]
+            },
+            {
+              "pairId": "ytts-p05-s03",
+              "original": "庵后有呼应石，有鸣玉涧。",
+              "translation": "庵堂后面有**呼应石**，还有**鸣玉涧**。",
+              "keywords": [
+                "呼应石",
+                "鸣玉涧"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ytts-p06",
+          "scene": "石梁飞瀑",
+          "shareImage": "/content/assets/you-tiantaishan-riji/images/1-2.jpeg",
+          "ambientAudio": "/content/assets/you-tiantaishan-riji/audio/ambient-stream.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-classic.wav",
+            "female_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-classic.wav",
+            "male_calm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-calm.wav",
+            "female_warm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "ytts-p06-s01",
+              "original": "初三日，天山一碧如黛，不暇晨餐，即循仙筏上艺花亭。",
+              "translation": "初三这一天，天空和山峦一片碧绿，如同青黑色的黛玉。顾不上吃早饭，我们就顺着**仙筏桥**登上了艺花亭。",
+              "keywords": [
+                "仙筏桥",
+                "艺花亭"
+              ]
+            },
+            {
+              "pairId": "ytts-p06-s02",
+              "original": "石梁即在亭外。",
+              "translation": "著名的**石梁**就在亭子外面。",
+              "keywords": [
+                "石梁"
+              ]
+            },
+            {
+              "pairId": "ytts-p06-s03",
+              "original": "梁尺余宽，长三丈，架两山坳间。",
+              "translation": "石梁只有一尺多宽，长约三丈，横架在两座山坳之间。",
+              "keywords": [
+                "石梁"
+              ]
+            },
+            {
+              "pairId": "ytts-p06-s04",
+              "original": "两飞瀑从亭左来，至桥乃合流下坠，雷轰河隤，百丈不止。",
+              "translation": "两股飞瀑从亭子的左边奔流而来，到了石梁桥的位置汇合在一起向下坠落，声音如**雷霆轰鸣**，势头如黄河决堤，落差不下百丈。",
+              "keywords": [
+                "飞瀑",
+                "雷霆"
+              ]
+            },
+            {
+              "pairId": "ytts-p06-s05",
+              "original": "余从梁上行，下瞰深潭，毛骨俱悚。",
+              "translation": "我从石梁上走过去，向下俯瞰那深不见底的潭水，不由得**毛骨悚然**。",
+              "keywords": [
+                "深潭"
+              ]
+            },
+            {
+              "pairId": "ytts-p06-s06",
+              "original": "梁尽即为大石，有昙花亭，盖五百罗汉显化处。",
+              "translation": "石梁的尽头是一块巨大的岩石，建有**昙花亭**，相传这里是五百罗汉显灵幻化的地方。",
+              "keywords": [
+                "昙花亭",
+                "五百罗汉"
+              ]
+            },
+            {
+              "pairId": "ytts-p06-s07",
+              "original": "二十里，过上方广，至石梁。礼佛昙花亭，不暇细观飞瀑。",
+              "translation": "走了二十里，经过**上方广寺**，到达石梁。在昙花亭拜完佛后，来不及仔细观看飞瀑。",
+              "keywords": [
+                "上方广"
+              ]
+            },
+            {
+              "pairId": "ytts-p06-s08",
+              "original": "下至下方广，仰视石梁飞瀑，忽在天际。",
+              "translation": "起身后下到**下方广寺**，再抬头仰望石梁飞瀑，只见它仿佛悬挂在天际。",
+              "keywords": [
+                "下方广"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ytts-p07",
+          "scene": "断桥珠帘",
+          "shareImage": "/content/assets/you-tiantaishan-riji/images/1-2.jpeg",
+          "ambientAudio": "/content/assets/you-tiantaishan-riji/audio/ambient-stream.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-classic.wav",
+            "female_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-classic.wav",
+            "male_calm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-calm.wav",
+            "female_warm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "ytts-p07-s01",
+              "original": "闻断桥、珠帘尤胜，僧言饭后行犹及往返，遂由仙筏桥向山后。",
+              "translation": "听说**断桥瀑布**和**珠帘瀑布**的景色更加奇特，和尚说饭后去还来得及打个来回，于是我们便由仙筏桥向山后走去。",
+              "keywords": [
+                "断桥",
+                "珠帘"
+              ]
+            },
+            {
+              "pairId": "ytts-p07-s02",
+              "original": "上层为断桥，两石斜合，水碎迸石间，汇转入潭；中层两石对峙如门，水为门束，势甚怒；下层潭口颇阔，泻处如阈，水从坳中斜下。",
+              "translation": "**断桥瀑布**的上层是两块石头斜斜地合在一起，溪水在石缝间撞得粉碎，然后汇聚旋转着流入深潭；中层是两块巨石像大门一样相对耸立，溪水被两石夹束，水势极为愤怒暴烈；下层的潭口比较宽阔，水流倾泻的地方就像门槛一样，水流从山坳中倾斜着奔流而下。",
+              "keywords": [
+                "断桥",
+                "三级瀑布"
+              ]
+            },
+            {
+              "pairId": "ytts-p07-s03",
+              "original": "三级俱高数丈，各级神奇，但循级而下，宛转处为曲所遮，不能一望尽收。",
+              "translation": "这三级瀑布每级都高大数丈，各具神妙，但是顺着山级往下走，由于山路转弯处被弯曲的岩石遮挡，无法一眼将美景全部收尽。",
+              "keywords": [
+                "三级"
+              ]
+            },
+            {
+              "pairId": "ytts-p07-s04",
+              "original": "又里许，为珠帘水，水倾下处甚平阔，其势散缓，滔滔汩汩。",
+              "translation": "又走了一里多地，就是**珠帘水**，水流倾泻下来的地方非常平坦宽阔，水势分散而缓慢，滔滔汩汩地流淌。",
+              "keywords": [
+                "珠帘水"
+              ]
+            },
+            {
+              "pairId": "ytts-p07-s05",
+              "original": "余赤足跳草莽中，揉木缘崖，莲舟不能从。",
+              "translation": "我赤着脚跳在杂草丛中，抓着树木顺着悬崖攀爬，仆人**莲舟**已经跟不上了。",
+              "keywords": [
+                "莲舟"
+              ]
+            },
+            {
+              "pairId": "ytts-p07-s06",
+              "original": "暝色四下，始返。",
+              "translation": "直到夜幕四合，我才往回走。",
+              "keywords": [
+                "暝色"
+              ]
+            },
+            {
+              "pairId": "ytts-p07-s07",
+              "original": "停足仙筏桥，观石梁卧虹，飞瀑喷雪，几不欲卧。",
+              "translation": "在仙筏桥上停下脚步，观看石梁如同**卧在空中的彩虹**，飞瀑如同喷涌的白雪，壮丽得让人几乎不想去睡觉。",
+              "keywords": [
+                "石梁卧虹"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ytts-part-04",
+      "heading": "第四部分：造访华顶绝顶，冬雪凝霜",
+      "paragraphs": [
+        {
+          "id": "ytts-p08",
+          "scene": "华顶绝顶",
+          "shareImage": "/content/assets/you-tiantaishan-riji/images/1-3.jpeg",
+          "ambientAudio": "/content/assets/you-tiantaishan-riji/audio/ambient-mountain.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-classic.wav",
+            "female_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-classic.wav",
+            "male_calm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-calm.wav",
+            "female_warm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "ytts-p08-s01",
+              "original": "初四日，循原路至高明庵，饭后，由庵后右折，循山践践而登。",
+              "translation": "初四这一天，我们沿着原路返回到高明庵。吃过饭后，从庵堂后面向右转，顺着山路一步一步地向上攀登。",
+              "keywords": [
+                "高明庵"
+              ]
+            },
+            {
+              "pairId": "ytts-p08-s02",
+              "original": "一里，过高明大溪，即从大溪旁登山。",
+              "translation": "走了一里路，渡过高明大溪，随即紧贴着大溪旁边开始登山。",
+              "keywords": [
+                "高明大溪"
+              ]
+            },
+            {
+              "pairId": "ytts-p08-s03",
+              "original": "山势陡绝，石级苔滑，且无人迹。",
+              "translation": "这里的山势极其陡峭，石阶上长满青苔非常湿滑，而且没有人类行走的痕迹。",
+              "keywords": [
+                "陡绝"
+              ]
+            },
+            {
+              "pairId": "ytts-p08-s04",
+              "original": "五里，至两山夹坳中，名为黄泥岙。",
+              "translation": "走了五里，来到两山夹峙的山坳中，这个地方叫**黄泥岙**。",
+              "keywords": [
+                "黄泥岙"
+              ]
+            },
+            {
+              "pairId": "ytts-p08-s05",
+              "original": "有岐路：西出天封，东趋华顶。",
+              "translation": "这里有条分岔路：向西通往天封，向东通往华顶。",
+              "keywords": [
+                "天封",
+                "华顶"
+              ]
+            },
+            {
+              "pairId": "ytts-p08-s06",
+              "original": "余意在华顶，乃由东路。",
+              "translation": "我的意愿是去华顶，于是便走了东边的路。",
+              "keywords": [
+                "华顶"
+              ]
+            },
+            {
+              "pairId": "ytts-p08-s07",
+              "original": "初上，无甚大树，多高草。",
+              "translation": "刚开始往上爬时，没有什么大树，大多是高耸的杂草。",
+              "keywords": [
+                "高草"
+              ]
+            },
+            {
+              "pairId": "ytts-p08-s08",
+              "original": "已而，大木参天，浓阴蔽日。",
+              "translation": "过了一会儿，便看到参天大树，浓密的树阴遮天蔽日。",
+              "keywords": [
+                "参天大树"
+              ]
+            },
+            {
+              "pairId": "ytts-p08-s09",
+              "original": "又五里，至华顶庵。",
+              "translation": "又走了五里，到达**华顶庵**。",
+              "keywords": [
+                "华顶庵"
+              ]
+            },
+            {
+              "pairId": "ytts-p08-s10",
+              "original": "其地即华顶绝顶，四山环拱，如莲瓣簇。庵居其中，正当莲萼。",
+              "translation": "这个地方就是华顶的最高峰，四周的山峰环绕拱卫，就像一朵**莲花的花瓣**簇拥着；华顶庵坐落其中，正处于莲花花蕊的位置。",
+              "keywords": [
+                "华顶绝顶",
+                "莲瓣"
+              ]
+            },
+            {
+              "pairId": "ytts-p08-s11",
+              "original": "至则一发僧结庵于前，恐风自洞来，以石甃塞其门，大为叹惋。",
+              "translation": "到了之后，看到有一个留着头发的修行僧人在前面修了座小庵，他因为害怕山风从石洞里吹来，居然用石头把洞门给砌死堵住了，我对此**大为叹息惋惜**。",
+              "keywords": [
+                "发僧",
+                "叹惋"
+              ]
+            },
+            {
+              "pairId": "ytts-p08-s12",
+              "original": "复上至太白，循路登绝顶。",
+              "translation": "接着我又向上走到太白堂，顺着小路登上了最高绝顶。",
+              "keywords": [
+                "太白堂"
+              ]
+            },
+            {
+              "pairId": "ytts-p08-s13",
+              "original": "荒草靡靡，山高风冽，草上结霜高寸许，而四山回映，琪花玉树，玲珑弥望。",
+              "translation": "这里荒草倒伏，山高风大，极为寒冽，草上凝结的霜有一寸多厚。而四周的山峰在阳光下交相辉映，满眼都是**冰雕玉琢、玲珑剔透**的奇花玉树。",
+              "keywords": [
+                "结霜",
+                "琪花玉树"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ytts-part-05",
+      "heading": "第五部分：下华顶峰，夜宿国清寺",
+      "paragraphs": [
+        {
+          "id": "ytts-p09",
+          "scene": "赤城霞起",
+          "shareImage": "/content/assets/you-tiantaishan-riji/images/1-4.jpeg",
+          "ambientAudio": "/content/assets/you-tiantaishan-riji/audio/ambient-mountain.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-classic.wav",
+            "female_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-classic.wav",
+            "male_calm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-calm.wav",
+            "female_warm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "ytts-p09-s01",
+              "original": "初五日，下华顶，向赤城。",
+              "translation": "初五这一天，我们走下华顶峰，前往**赤城山**。",
+              "keywords": [
+                "赤城"
+              ]
+            },
+            {
+              "pairId": "ytts-p09-s02",
+              "original": "赤城在国清寺南十里，全山皆赤文。",
+              "translation": "赤城山在国清寺南面十里处，整座山的山石都带有**赤红色的纹理**。",
+              "keywords": [
+                "赤城",
+                "赤文"
+              ]
+            },
+            {
+              "pairId": "ytts-p09-s03",
+              "original": "上有一塔，其前为玉京洞，即天台第六洞天也。",
+              "translation": "山顶上有一座佛塔，塔的前面是**玉京洞**，也就是道教所说的”天台山第六洞天”。",
+              "keywords": [
+                "玉京洞",
+                "第六洞天"
+              ]
+            },
+            {
+              "pairId": "ytts-p09-s04",
+              "original": "洞前有石，状如危石相垒。",
+              "translation": "洞穴前有几块石头，形状看起来就像是危险的危石层层堆垒在一起。",
+              "keywords": [
+                "危石"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ytts-part-06",
+      "heading": "第六部分：造访寒岩明岩，绝壁惊魂",
+      "paragraphs": [
+        {
+          "id": "ytts-p10",
+          "scene": "寒岩鹊桥",
+          "shareImage": "/content/assets/you-tiantaishan-riji/images/1-4.jpeg",
+          "ambientAudio": "/content/assets/you-tiantaishan-riji/audio/ambient-stream.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-classic.wav",
+            "female_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-classic.wav",
+            "male_calm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-calm.wav",
+            "female_warm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "ytts-p10-s01",
+              "original": "初六日，凌晨出寺，六七里，至寒岩。",
+              "translation": "初六这一天，天还没亮就走出了国清寺，走了六七里路，来到了**寒岩**。",
+              "keywords": [
+                "寒岩"
+              ]
+            },
+            {
+              "pairId": "ytts-p10-s02",
+              "original": "石壁直上如劈，仰观空中，洞穴甚多。",
+              "translation": "这里的石壁像被刀劈一样笔直地直插云霄，抬头仰望空中，有非常多的洞穴。",
+              "keywords": [
+                "石壁",
+                "洞穴"
+              ]
+            },
+            {
+              "pairId": "ytts-p10-s03",
+              "original": "有一洞，广八十步，深百余步，平展明朗。",
+              "translation": "其中有一个洞，宽有八十步，深有一百多步，里面地势平坦而且十分宽敞明亮。",
+              "keywords": [
+                "洞穴",
+                "平展"
+              ]
+            },
+            {
+              "pairId": "ytts-p10-s04",
+              "original": "循岩右行，从石隘仰登。",
+              "translation": "顺着岩壁向右走，从一条狭窄的石缝中向上攀登。",
+              "keywords": [
+                "石隘"
+              ]
+            },
+            {
+              "pairId": "ytts-p10-s05",
+              "original": "岩坳有两石对耸，下分上连，为鹊桥，亦可与方广石梁争奇，但少飞瀑直下耳。",
+              "translation": "岩石的低凹处有两块巨石相对耸立，下面是分开的，顶端却连在一起，这就是**鹊桥**，它也可以与方广寺的石梁桥争奇斗艳，只是少了飞流直下的瀑布而已。",
+              "keywords": [
+                "鹊桥",
+                "方广石梁"
+              ]
+            },
+            {
+              "pairId": "ytts-p10-s06",
+              "original": "还饭僧舍，觅筏渡一溪。",
+              "translation": "回到僧人的住所吃了饭，找了一只竹筏渡过一条溪流。",
+              "keywords": [
+                "竹筏"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ytts-p11",
+          "scene": "绝壁惊魂",
+          "shareImage": "/content/assets/you-tiantaishan-riji/images/1-4.jpeg",
+          "ambientAudio": "/content/assets/you-tiantaishan-riji/audio/ambient-stream.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-classic.wav",
+            "female_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-classic.wav",
+            "male_calm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-calm.wav",
+            "female_warm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "ytts-p11-s01",
+              "original": "循溪行山下，一带峭壁巉崖，草木盘垂其上，内多海棠紫荆，映荫溪色，香风来处，玉兰芳草，处处不绝。",
+              "translation": "沿着溪流在山脚下前行，一路上全是一带陡峭的悬崖峭壁，草木盘旋垂挂在上面，其中长着许多**海棠和紫荆**，倒映并遮蔽着溪水。迎面吹来阵阵香风，**白玉兰**和芳香的野草处处可见，延绵不绝。",
+              "keywords": [
+                "海棠",
+                "紫荆",
+                "玉兰"
+              ]
+            },
+            {
+              "pairId": "ytts-p11-s02",
+              "original": "已至一山嘴，石壁直竖涧底，涧深流驶，旁无余地。壁上凿孔以行，孔中仅容半趾，逼身而过，神魄为动。",
+              "translation": "不久来到一个山嘴前，这里的石壁笔直地插入涧底，山涧极深且水流湍急，旁边没有任何可以立足的余地。人们只能在石壁上凿出的孔洞里穿行，孔洞窄得仅仅能容下半只脚趾，必须紧贴着岩壁侧身而过，让人**心惊肉跳**，魂魄为之震撼。",
+              "keywords": [
+                "凿孔",
+                "神魄"
+              ]
+            },
+            {
+              "pairId": "ytts-p11-s03",
+              "original": "自寒岩十五里至步头，从小路向桃源。桃源在护国寺旁，寺已废，土人茫无知者。",
+              "translation": "从寒岩走了十五里到达步头，接着从小路走向**桃源**。桃源在护国寺旁边，但寺庙已经荒废，当地的百姓竟然没有一个人知道它在哪里。",
+              "keywords": [
+                "步头",
+                "桃源",
+                "护国寺"
+              ]
+            },
+            {
+              "pairId": "ytts-p11-s04",
+              "original": "随云峰莽行曲路中，日已堕，竟无宿处，乃复问至坪头潭。",
+              "translation": "我们伴随着云雾缭绕的山峰在杂草丛生的弯曲小路中盲目摸索，太阳已经落山了，竟然找不到住宿的地方，于是只好再次打听道路，来到了**坪头潭**宿下。",
+              "keywords": [
+                "坪头潭"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ytts-part-07",
+      "heading": "第七部分：寻觅桃花坞，登顶琼台双阙",
+      "paragraphs": [
+        {
+          "id": "ytts-p12",
+          "scene": "桃花坞鸣玉涧",
+          "shareImage": "/content/assets/you-tiantaishan-riji/images/1-4.jpeg",
+          "ambientAudio": "/content/assets/you-tiantaishan-riji/audio/ambient-stream.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-classic.wav",
+            "female_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-classic.wav",
+            "male_calm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-calm.wav",
+            "female_warm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "ytts-p12-s01",
+              "original": "初七日，自坪头潭行曲路中三十余里，渡溪入山。",
+              "translation": "初七这一天，我们从**坪头潭**出发，在弯弯曲曲的山路中行走了三十多里路，渡过溪水进入山中。",
+              "keywords": [
+                "坪头潭"
+              ]
+            },
+            {
+              "pairId": "ytts-p12-s02",
+              "original": "又四五里，山口渐夹，有馆曰桃花坞。",
+              "translation": "又前行了四五里，山口渐渐变得狭窄，这里有一处房舍，叫做**桃花坞**。",
+              "keywords": [
+                "桃花坞"
+              ]
+            },
+            {
+              "pairId": "ytts-p12-s03",
+              "original": "循深潭而行，潭水澄碧，飞泉自上来注，为鸣玉涧。",
+              "translation": "顺着深潭的边缘前行，潭中的水清澈碧蓝，飞溅的山泉水从上方注入潭中，这里叫做**鸣玉涧**。",
+              "keywords": [
+                "鸣玉涧"
+              ]
+            },
+            {
+              "pairId": "ytts-p12-s04",
+              "original": "涧随山转，人随涧行。两旁山皆石骨，攒峦夹翠，涉目成赏，大抵胜在寒、明两岩间。",
+              "translation": "山涧随着山势流转，人则顺着山涧前行。两旁的山峰全是裸露的岩石，攒簇的山峦间到处夹杂着翠绿的树木，凡是眼睛看到的都是可供赏玩的景致，这美景大体上都在**寒岩、明岩**这两岩之间。",
+              "keywords": [
+                "石骨",
+                "寒岩",
+                "明岩"
+              ]
+            },
+            {
+              "pairId": "ytts-p12-s05",
+              "original": "涧穷路绝，一瀑从山坳泻下，势甚纵横。",
+              "translation": "走到山涧穷尽、道路断绝的地方，只见一条瀑布从山坳间倾泻而下，态势非常奔放纵横。",
+              "keywords": [
+                "瀑布",
+                "山坳"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ytts-p13",
+          "scene": "琼台双阙",
+          "shareImage": "/content/assets/you-tiantaishan-riji/images/1-4.jpeg",
+          "ambientAudio": "/content/assets/you-tiantaishan-riji/audio/ambient-mountain.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-classic.wav",
+            "female_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-classic.wav",
+            "male_calm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-calm.wav",
+            "female_warm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "ytts-p13-s01",
+              "original": "出饭馆中，循坞东南行，越两岭，寻所谓“琼台”、”双阙”，竟无知者。",
+              "translation": "在饭馆吃过饭后，我们顺着山洼向东南方向走，翻越了两座山岭，去寻觅所谓的**琼台**和**双阙**两处胜景，竟然没有人知道在哪里。",
+              "keywords": [
+                "琼台",
+                "双阙"
+              ]
+            },
+            {
+              "pairId": "ytts-p13-s02",
+              "original": "去数里，访知在山顶。与云峰攀援而上，则山巅也。",
+              "translation": "前行了几里路，才打听到它们在山顶上。我和云峰和尚顺着山路艰难攀援而上，终于到达了山巅。",
+              "keywords": [
+                "云峰",
+                "山巅"
+              ]
+            },
+            {
+              "pairId": "ytts-p13-s03",
+              "original": "下视峭削环转，一如桃源，而翠壁万丈，过之。",
+              "translation": "低头俯视，只见四周的岩壁陡峭如削、环绕盘旋，完全就像**桃源洞**的景致，而那布满翠绿树木的万丈绝壁，甚至超过了桃源洞的险峻。",
+              "keywords": [
+                "桃源",
+                "翠壁"
+              ]
+            },
+            {
+              "pairId": "ytts-p13-s04",
+              "original": "峰顶中断，即双阙也；正对双阙，其中环台，即琼台也。台三面绝壁，后连双阙。",
+              "translation": "山峰的顶部从中间断开，这就是所谓的**双阙**；正对着双阙，中间有一座环形的石台，就是**琼台**。琼台的三面都是万丈绝壁，后方与双阙相连。",
+              "keywords": [
+                "双阙",
+                "琼台",
+                "绝壁"
+              ]
+            },
+            {
+              "pairId": "ytts-p13-s05",
+              "original": "余已立对阙之上，日暮不及复登，然胜已一日尽矣。",
+              "translation": "此时我已经站在了与双阙相对的峰顶上，天色已晚，来不及再爬上琼台。然而，这里的绝美景致已经被我一天全部饱览尽了。",
+              "keywords": [
+                "日暮"
+              ]
+            },
+            {
+              "pairId": "ytts-p13-s06",
+              "original": "遂下山，从赤城后还国清，凡三十里。",
+              "translation": "于是我们下山，从赤城山的后面返回**国清寺**，总计行程三十里。",
+              "keywords": [
+                "赤城",
+                "国清寺"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ytts-part-08",
+      "heading": "第八部分：重登赤城山，作别天台山",
+      "paragraphs": [
+        {
+          "id": "ytts-p14",
+          "scene": "重登赤城",
+          "shareImage": "/content/assets/you-tiantaishan-riji/images/1-4.jpeg",
+          "ambientAudio": "/content/assets/you-tiantaishan-riji/audio/ambient-mountain.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-classic.wav",
+            "female_classic": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-classic.wav",
+            "male_calm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-male-calm.wav",
+            "female_warm": "/content/assets/you-tiantaishan-riji/audio/yxsk-p01-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "ytts-p14-s01",
+              "original": "初八日，离国清，从山后五里登赤城。",
+              "translation": "初八这一天，我离开了**国清寺**，从山后走了五里路去攀登赤城山。",
+              "keywords": [
+                "国清寺",
+                "赤城"
+              ]
+            },
+            {
+              "pairId": "ytts-p14-s02",
+              "original": "赤城山顶圆壁特起，望之如城，而石色微赤。",
+              "translation": "赤城山的山顶有一块圆形的巨壁特意隆起，远远望去就像一座城墙，而且石头的颜色微微泛红。",
+              "keywords": [
+                "圆壁",
+                "微赤"
+              ]
+            },
+            {
+              "pairId": "ytts-p14-s03",
+              "original": "岩穴为僧舍凌杂，尽掩天趣。",
+              "translation": "不过山上的岩洞大都被僧人的房舍凌乱地占据了，完全掩盖了自然天成的野趣。",
+              "keywords": [
+                "僧舍",
+                "天趣"
+              ]
+            },
+            {
+              "pairId": "ytts-p14-s04",
+              "original": "所谓玉京洞、金钱池、洗肠井，俱无甚奇。",
+              "translation": "至于人们所说的**玉京洞**、金钱池、洗肠井等名胜，看过去都没有什么奇特的地方。",
+              "keywords": [
+                "玉京洞",
+                "金钱池",
+                "洗肠井"
+              ]
             }
           ]
         }

@@ -1,75 +1,91 @@
-import type { CSSProperties, MouseEvent } from "react";
+import type { CSSProperties, KeyboardEvent, MouseEvent } from "react";
 import type { Article, Paragraph, ReadingMode, SelectedPassage, TextPair } from "../types";
 import { formatInline } from "../textFormat";
 
 interface ArticleReaderProps {
   article: Article;
-  highlightedPairId?: string;
+  highlightedPairIds: Set<string>;
   mode: ReadingMode;
   fontScale: number;
-  onPairFocus: (pairId: string) => void;
+  onPairFocus: (pairIds: Set<string>) => void;
   onSelectionChange: (selection: SelectedPassage | null) => void;
 }
 
-function pickSelectionText(fallback: string) {
-  const selection = window.getSelection();
-  const text = selection?.toString().trim();
-  return text || fallback;
-}
-
-function SentenceButton({
+function SentenceSpan({
   pair,
   type,
-  highlightedPairId,
-  paragraph,
-  article,
-  partHeading,
-  onPairFocus,
-  onSelectionChange,
+  highlightedPairIds,
 }: {
   pair: TextPair;
   type: "original" | "translation";
-  highlightedPairId?: string;
-  paragraph: Paragraph;
-  article: Article;
-  partHeading: string;
-  onPairFocus: (pairId: string) => void;
-  onSelectionChange: (selection: SelectedPassage | null) => void;
+  highlightedPairIds: Set<string>;
+  onPairFocus: (pairIds: Set<string>) => void;
 }) {
   const text = type === "original" ? pair.original : pair.translation;
-  const counterpart = type === "original" ? pair.translation : pair.original;
 
-  function handleMouseUp(event: MouseEvent<HTMLButtonElement>) {
-    event.stopPropagation();
-    onPairFocus(pair.pairId);
-    onSelectionChange({
-      text: pickSelectionText(text.replace(/\*\*/g, "")),
-      counterpart: counterpart.replace(/\*\*/g, ""),
-      pairId: pair.pairId,
-      articleTitle: article.title,
-      partHeading,
-      scene: paragraph.scene,
-      shareImage: paragraph.shareImage,
-      source: type,
-    });
+  function handleKeyDown(event: KeyboardEvent<HTMLSpanElement>) {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+    }
   }
 
   return (
-    <button
-      className={`sentence ${highlightedPairId === pair.pairId ? "active" : ""}`}
+    <span
+      className={`sentence ${highlightedPairIds.has(pair.pairId) ? "active" : ""}`}
       data-pair-id={pair.pairId}
-      type="button"
-      onClick={() => onPairFocus(pair.pairId)}
-      onMouseUp={handleMouseUp}
+      data-type={type}
+      role="button"
+      tabIndex={0}
+      onKeyDown={handleKeyDown}
     >
       {formatInline(text)}
-    </button>
+    </span>
   );
+}
+
+function stripMarkdown(text: string) {
+  return text.replace(/\*\*/g, "");
+}
+
+function collectPairIdsInRange(range: Range, root: HTMLElement) {
+  const pairIds: string[] = [];
+  const types = new Set<"original" | "translation">();
+  const seen = new Set<string>();
+
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT, {
+    acceptNode(node) {
+      const el = node as HTMLElement;
+      if (el.dataset?.pairId) return NodeFilter.FILTER_ACCEPT;
+      return NodeFilter.FILTER_SKIP;
+    },
+  });
+
+  let node: Node | null;
+  while ((node = walker.nextNode())) {
+    const el = node as HTMLElement;
+    if (range.intersectsNode(el)) {
+      const id = el.dataset.pairId!;
+      if (!seen.has(id)) {
+        seen.add(id);
+        pairIds.push(id);
+        types.add(el.dataset.type as "original" | "translation");
+      }
+    }
+  }
+
+  const source: "original" | "translation" =
+    types.has("original") && !types.has("translation")
+      ? "original"
+      : types.has("translation") && !types.has("original")
+        ? "translation"
+        : types.values().next().value ?? "original";
+
+  return { pairIds, source };
 }
 
 export function ArticleReader({
   article,
-  highlightedPairId,
+  highlightedPairIds,
   mode,
   fontScale,
   onPairFocus,
@@ -79,8 +95,66 @@ export function ArticleReader({
   const showTranslation = mode !== "original";
   const readerStyle = { "--reader-scale": fontScale } as CSSProperties;
 
+  function handleMouseUp(event: MouseEvent<HTMLDivElement>) {
+    const root = event.currentTarget;
+    const selection = window.getSelection();
+
+    if (!selection) return;
+
+    if (!selection.isCollapsed) {
+      // 拖选：基于 Selection Range 处理，不依赖 mouseup 目标元素
+      // mouseup 目标可能是段落间距、标题等非句子元素，不应阻断有效选区
+      const range = selection.getRangeAt(0);
+      const { pairIds, source } = collectPairIdsInRange(range, root);
+      if (pairIds.length === 0) return;
+
+      const pairs = pairIds.map((id) => findPair(article, id)).filter(Boolean) as TextPair[];
+      const text = pairs.map((p) => stripMarkdown(source === "original" ? p.original : p.translation)).join("");
+      const counterpart = pairs.map((p) => stripMarkdown(source === "original" ? p.translation : p.original)).join("");
+
+      const firstPair = pairs[0];
+      const { paragraph, partHeading } = findParagraph(article, pairIds[0]);
+
+      onPairFocus(new Set(pairIds));
+      onSelectionChange({
+        text,
+        counterpart,
+        pairIds,
+        articleTitle: article.title,
+        partHeading,
+        scene: paragraph?.scene ?? "",
+        shareImage: firstPair.shareImage || paragraph?.shareImage || "",
+        source,
+      });
+      return;
+    }
+
+    // 单击：需要知道点击了哪个句子
+    const target = event.target as HTMLElement;
+    const sentenceEl = target.closest<HTMLElement>("[data-pair-id]");
+    if (!sentenceEl) return;
+
+    const pairId = sentenceEl.dataset.pairId!;
+    const type = (sentenceEl.dataset.type ?? "original") as "original" | "translation";
+    const pair = findPair(article, pairId);
+    if (!pair) return;
+    const { paragraph, partHeading } = findParagraph(article, pairId);
+
+    onPairFocus(new Set([pairId]));
+    onSelectionChange({
+      text: stripMarkdown(type === "original" ? pair.original : pair.translation),
+      counterpart: stripMarkdown(type === "original" ? pair.translation : pair.original),
+      pairIds: [pairId],
+      articleTitle: article.title,
+      partHeading,
+      scene: paragraph?.scene ?? "",
+      shareImage: pair.shareImage || paragraph?.shareImage || "",
+      source: type,
+    });
+  }
+
   return (
-    <article className="article-reader" style={readerStyle}>
+    <article className="article-reader" style={readerStyle} onMouseUp={handleMouseUp}>
       <div className="article-title-block">
         <p className="source-note">{article.sourceNote}</p>
         <h2>{article.title}</h2>
@@ -99,16 +173,12 @@ export function ArticleReader({
                     <h4>【原文】</h4>
                     <div className="sentence-flow">
                       {paragraph.pairs.map((pair) => (
-                        <SentenceButton
+                        <SentenceSpan
                           key={`${pair.pairId}-original`}
                           pair={pair}
                           type="original"
-                          highlightedPairId={highlightedPairId}
-                          paragraph={paragraph}
-                          article={article}
-                          partHeading={part.heading}
+                          highlightedPairIds={highlightedPairIds}
                           onPairFocus={onPairFocus}
-                          onSelectionChange={onSelectionChange}
                         />
                       ))}
                     </div>
@@ -120,16 +190,12 @@ export function ArticleReader({
                     <h4>【翻译】</h4>
                     <div className="sentence-flow">
                       {paragraph.pairs.map((pair) => (
-                        <SentenceButton
+                        <SentenceSpan
                           key={`${pair.pairId}-translation`}
                           pair={pair}
                           type="translation"
-                          highlightedPairId={highlightedPairId}
-                          paragraph={paragraph}
-                          article={article}
-                          partHeading={part.heading}
+                          highlightedPairIds={highlightedPairIds}
                           onPairFocus={onPairFocus}
-                          onSelectionChange={onSelectionChange}
                         />
                       ))}
                     </div>
@@ -142,4 +208,26 @@ export function ArticleReader({
       ))}
     </article>
   );
+}
+
+function findPair(article: Article, pairId: string): TextPair | undefined {
+  for (const part of article.parts) {
+    for (const para of part.paragraphs) {
+      for (const pair of para.pairs) {
+        if (pair.pairId === pairId) return pair;
+      }
+    }
+  }
+  return undefined;
+}
+
+function findParagraph(article: Article, pairId: string): { paragraph: Paragraph | undefined; partHeading: string } {
+  for (const part of article.parts) {
+    for (const para of part.paragraphs) {
+      if (para.pairs.some((p) => p.pairId === pairId)) {
+        return { paragraph: para, partHeading: part.heading };
+      }
+    }
+  }
+  return { paragraph: undefined, partHeading: "" };
 }

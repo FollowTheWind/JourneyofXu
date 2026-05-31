@@ -1,9 +1,3 @@
-export type VoiceKey =
-  | "male_classic"
-  | "female_classic"
-  | "male_calm"
-  | "female_warm";
-
 export type ReadingMode = "parallel" | "original" | "translation";
 
 export interface CatalogArticle {
@@ -33,14 +27,13 @@ export interface TextPair {
   original: string;
   translation: string;
   keywords: string[];
+  shareImage?: string;
 }
 
 export interface Paragraph {
   id: string;
   scene: string;
   shareImage: string;
-  ambientAudio: string;
-  voiceAudio: Record<VoiceKey, string>;
   pairs: TextPair[];
 }
 
@@ -62,7 +55,7 @@ export interface Article {
 export interface SelectedPassage {
   text: string;
   counterpart: string;
-  pairId: string;
+  pairIds: string[];
   articleTitle: string;
   partHeading: string;
   scene: string;

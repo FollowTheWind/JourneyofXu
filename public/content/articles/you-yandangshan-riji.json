@@ -1,18 +1,18 @@
 {
   "id": "you-yandangshan-riji",
   "title": "游雁宕山日记",
-  "sourceNote": "样章用于演示结构与交互；正式底本待用户提供后替换校订。",
+  "sourceNote": "底本据徐霞客游记校订本，涵盖万历四十一年（1613年）四月初九至十八日雁荡山行程全文。",
   "assetBase": "/content/assets/you-yandangshan-riji",
-  "intro": "《游雁宕山日记》记述徐霞客访游雁宕山的路径、峰石、寺观与瀑泉。雁宕以奇峰怪石闻名，徐霞客以亲身登临与细密观察记录其形势，使文章不仅有文学性的景物铺陈，也具备山地地貌考察的价值。",
+  "intro": "徐霞客紧接天台山之行，于明万历四十一年（1613年）四月初九至四月十八日游历了雁荡山（书中写作“雁宕山”）。《游雁宕山日记》作为其标志性名篇，详细记录了雁荡山“奇峰怪石、飞瀑危崖”的绝美景观。",
   "parts": [
     {
       "id": "yands-part-01",
-      "heading": "第一部分：入谷望峰，奇势初开",
+      "heading": "第一部分：初入雁宕，宿筋竹涧",
       "paragraphs": [
         {
           "id": "yands-p01",
-          "scene": "雁宕峰影",
-          "shareImage": "/content/assets/you-yandangshan-riji/images/yands-p01.svg",
+          "scene": "晓行入山",
+          "shareImage": "/content/assets/you-yandangshan-riji/images/2-1.jpg",
           "ambientAudio": "/content/assets/you-yandangshan-riji/audio/ambient-valley.wav",
           "voiceAudio": {
             "male_classic": "/content/assets/you-yandangshan-riji/audio/yands-p01-male-classic.wav",
@@ -23,22 +23,45 @@
           "pairs": [
             {
               "pairId": "yands-p01-s01",
-              "original": "自乐清入山，群峰森列，若屏若戟。",
-              "translation": "从**乐清**进入山中，只见群峰密密排列，有的像屏风，有的像长戟。",
-              "keywords": ["乐清", "群峰"]
+              "original": "初九日，自天台趋雁宕。过岭二重，行四十里，至步头。",
+              "translation": "四月初九这一天，我从**天台山**奔赴雁荡山。翻越了两重山岭，行走了四十里，到达**步头**。",
+              "keywords": [
+                "天台",
+                "步头"
+              ]
             },
             {
               "pairId": "yands-p01-s02",
-              "original": "仰视不见其巅，云气出没其间。",
-              "translation": "仰头望去，看不见峰顶，云气在山峰之间时隐时现。",
-              "keywords": ["峰顶", "云气"]
+              "original": "从小路向临海，三十里，宿仙人桥。",
+              "translation": "从小路走向临海县方向，又走了三十里，住宿在**仙人桥**。",
+              "keywords": [
+                "临海",
+                "仙人桥"
+              ]
+            },
+            {
+              "pairId": "yands-p01-s03",
+              "original": "初十日，行四十里，至临海县，沿江行三十里，至大田。",
+              "translation": "四月初十这一天，行走了四十里，到达**临海县**城，接着沿着江边前行了三十里，抵达**大田**。",
+              "keywords": [
+                "临海县",
+                "大田"
+              ]
+            },
+            {
+              "pairId": "yands-p01-s04",
+              "original": "十一日，行九十里，至盘山。",
+              "translation": "四月十一日，赶路行走了九十里，到达**盘山**。",
+              "keywords": [
+                "盘山"
+              ]
             }
           ]
         },
         {
           "id": "yands-p02",
-          "scene": "瀑声入谷",
-          "shareImage": "/content/assets/you-yandangshan-riji/images/yands-p02.svg",
+          "scene": "筋竹深涧",
+          "shareImage": "/content/assets/you-yandangshan-riji/images/2-1.jpg",
           "ambientAudio": "/content/assets/you-yandangshan-riji/audio/ambient-waterfall.wav",
           "voiceAudio": {
             "male_classic": "/content/assets/you-yandangshan-riji/audio/yands-p02-male-classic.wav",
@@ -49,15 +72,498 @@
           "pairs": [
             {
               "pairId": "yands-p02-s01",
-              "original": "转入深谷，瀑声先至，白练垂空。",
-              "translation": "转入深谷时，还未见瀑布，瀑声已经先传到耳边；再往前看，白色水流像长练一样从空中垂下。",
-              "keywords": ["深谷", "瀑布"]
+              "original": "十二日，过乐清界。十五里，至章安驿。又十五里，至窑岙。再十里，至筋竹涧。",
+              "translation": "四月十二日，越过**乐清**县边界。行走了十五里，到达**章安驿**。又走了十五里，到达**窑岙**。再走十里，抵达了**筋竹涧**。",
+              "keywords": [
+                "乐清",
+                "窑岙",
+                "筋竹涧"
+              ]
             },
             {
               "pairId": "yands-p02-s02",
-              "original": "岩花被湿，石径生寒。",
-              "translation": "岩壁上的花草被水雾打湿，石径也泛起清寒之意。",
-              "keywords": ["水雾", "石径"]
+              "original": "涧下临深潭，高壁夹立，层峦叠嶂，俱从土中突起。",
+              "translation": "山涧下方紧临着深潭，高耸的悬崖在两旁对峙，重重叠叠的山峦，全都像是从土中拔地而起。",
+              "keywords": [
+                "深潭",
+                "层峦叠嶂"
+              ]
+            },
+            {
+              "pairId": "yands-p02-s03",
+              "original": "泉流激石，清流如泻。晚宿涧中庵。",
+              "translation": "泉水撞击着岩石，清澈的激流如同奔泻而出。傍晚，我住宿在筋竹涧中的庵堂里。",
+              "keywords": [
+                "泉流",
+                "庵堂"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yands-part-02",
+      "heading": "第二部分：入灵峰探灵岩，遍览诸峰异景",
+      "paragraphs": [
+        {
+          "id": "yands-p03",
+          "scene": "初入灵峰",
+          "shareImage": "/content/assets/you-yandangshan-riji/images/2-1.jpg",
+          "ambientAudio": "/content/assets/you-yandangshan-riji/audio/ambient-valley.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-yandangshan-riji/audio/yands-p01-male-classic.wav",
+            "female_classic": "/content/assets/you-yandangshan-riji/audio/yands-p01-female-classic.wav",
+            "male_calm": "/content/assets/you-yandangshan-riji/audio/yands-p01-male-calm.wav",
+            "female_warm": "/content/assets/you-yandangshan-riji/audio/yands-p01-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yands-p03-s01",
+              "original": "十三日，饭后，逾岭，即雁宕前海也。",
+              "translation": "四月十三日，吃过早饭后，翻越了一座山岭，眼前就是雁荡山前面的大海。",
+              "keywords": [
+                "雁宕前海"
+              ]
+            },
+            {
+              "pairId": "yands-p03-s02",
+              "original": "循海而西，渡谢公岭。下岭，两山夹峙，怪石崩沓，前有石如鹰，如双笋，如巨屏。",
+              "translation": "沿着海边向西前行，渡过了**谢公岭**。走下山岭，只见两座大山对峙，怪石崩塌堆叠，前方有的石头形状像苍鹰，有的像成双的竹笋，有的像巨大的屏风。",
+              "keywords": [
+                "谢公岭",
+                "怪石"
+              ]
+            },
+            {
+              "pairId": "yands-p03-s03",
+              "original": "导者曰：“此灵峰也。”",
+              "translation": "向导说：“这就是**灵峰**景区了。”",
+              "keywords": [
+                "灵峰"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "yands-p04",
+          "scene": "灵峰洞天",
+          "shareImage": "/content/assets/you-yandangshan-riji/images/2-1.jpg",
+          "ambientAudio": "/content/assets/you-yandangshan-riji/audio/ambient-waterfall.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-yandangshan-riji/audio/yands-p02-male-classic.wav",
+            "female_classic": "/content/assets/you-yandangshan-riji/audio/yands-p02-female-classic.wav",
+            "male_calm": "/content/assets/you-yandangshan-riji/audio/yands-p02-male-calm.wav",
+            "female_warm": "/content/assets/you-yandangshan-riji/audio/yands-p02-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yands-p04-s01",
+              "original": "入灵峰洞。洞深广，可容千人。中置层楼，上覆下构，不费一瓦。",
+              "translation": "我们进入**灵峰洞**。洞穴深邃宽敞，可以容纳上千人。洞中依势建有几层楼阁，上方由天然岩石覆盖，下方进行木石构建，没有花费一片瓦。",
+              "keywords": [
+                "灵峰洞",
+                "层楼"
+              ]
+            },
+            {
+              "pairId": "yands-p04-s02",
+              "original": "复出，循左山夹而上。乱石轰然，有石侧立如掌，有罅由中劈开。",
+              "translation": "随后再走出来，顺着左边大山的狭缝向上攀登。一路上乱石发出轰然的回响，有一块巨石像手掌一样侧向直立，中间有一道裂缝像是被劈开的一样。",
+              "keywords": [
+                "乱石",
+                "罅"
+              ]
+            },
+            {
+              "pairId": "yands-p04-s03",
+              "original": "由罅而入，则两壁环立，仰瞩长空，仅一线天。",
+              "translation": "从裂缝中走进去，只见两侧的峭壁环绕耸立，抬头仰望蔚蓝的天空，仅仅露出一线天光。",
+              "keywords": [
+                "一线天"
+              ]
+            },
+            {
+              "pairId": "yands-p04-s04",
+              "original": "两壁多层穴，僧倚其势，连构危楼。下瞰深黑，石乳淙淙。",
+              "translation": "两边的岩壁上有许多层天然洞穴，和尚们借助这种地势，接连修建了高耸的危楼。向下俯瞰一片漆黑，石钟乳滴水发出淙淙的响声。",
+              "keywords": [
+                "危楼",
+                "石钟乳"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "yands-p05",
+          "scene": "灵岩胜境",
+          "shareImage": "/content/assets/you-yandangshan-riji/images/2-2.jpg",
+          "ambientAudio": "/content/assets/you-yandangshan-riji/audio/ambient-valley.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-yandangshan-riji/audio/yands-p01-male-classic.wav",
+            "female_classic": "/content/assets/you-yandangshan-riji/audio/yands-p01-female-classic.wav",
+            "male_calm": "/content/assets/you-yandangshan-riji/audio/yands-p01-male-calm.wav",
+            "female_warm": "/content/assets/you-yandangshan-riji/audio/yands-p01-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yands-p05-s01",
+              "original": "出，过响岩，至净名寺。寺后有水帘、双笋之胜。",
+              "translation": "走出来后，经过**响岩**，到达**净名寺**。寺庙后面有**水帘瀑**、**双笋峰**等胜景。",
+              "keywords": [
+                "响岩",
+                "净名寺",
+                "水帘",
+                "双笋"
+              ]
+            },
+            {
+              "pairId": "yands-p05-s02",
+              "original": "又五里，至灵岩寺。寺后壁立千仞，前有两峰对峙，曰展旗、天柱。两峰相去三十丈，拔地而起，直插云霄。",
+              "translation": "又前行了五里，到达**灵岩寺**。寺庙后面是千仞高的笔直绝壁，前方有两座山峰相对耸立，叫做**展旗峰**和**天柱峰**。两座山峰相距大约三十丈，都是拔地而起，直插云霄。",
+              "keywords": [
+                "灵岩寺",
+                "展旗峰",
+                "天柱峰"
+              ]
+            },
+            {
+              "pairId": "yands-p05-s03",
+              "original": "天柱之右，有大龙湫，飞流自百丈以上下坠。",
+              "translation": "在天柱峰的右侧，有**大龙湫**瀑布，飞流从一百多丈的高空倾泻而下。",
+              "keywords": [
+                "大龙湫",
+                "飞流"
+              ]
+            },
+            {
+              "pairId": "yands-p05-s04",
+              "original": "是日，遍游灵岩、灵峰。晚，宿灵岩寺。",
+              "translation": "这一天，我把灵岩、灵峰两个景区游览了个遍。入夜后，住宿在灵岩寺。",
+              "keywords": [
+                "灵岩",
+                "灵峰"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yands-part-03",
+      "heading": "第三部分：寻访大龙湫，绝壁折返能仁寺",
+      "paragraphs": [
+        {
+          "id": "yands-p06",
+          "scene": "循溪探瀑",
+          "shareImage": "/content/assets/you-yandangshan-riji/images/2-2.jpg",
+          "ambientAudio": "/content/assets/you-yandangshan-riji/audio/ambient-waterfall.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-yandangshan-riji/audio/yands-p02-male-classic.wav",
+            "female_classic": "/content/assets/you-yandangshan-riji/audio/yands-p02-female-classic.wav",
+            "male_calm": "/content/assets/you-yandangshan-riji/audio/yands-p02-male-calm.wav",
+            "female_warm": "/content/assets/you-yandangshan-riji/audio/yands-p02-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yands-p06-s01",
+              "original": "十四日，由大龙湫向常云峰。常云峰在灵岩之后。",
+              "translation": "四月十四日，我们由大龙湫瀑布出发，奔向**常云峰**。常云峰位于灵岩的后面。",
+              "keywords": [
+                "常云峰",
+                "灵岩"
+              ]
+            },
+            {
+              "pairId": "yands-p06-s02",
+              "original": "循大溪而上，过小龙湫，水亦百丈。",
+              "translation": "顺着大溪流逆流而上，经过了**小龙湫**瀑布，这里的瀑布落差也有一百丈。",
+              "keywords": [
+                "小龙湫"
+              ]
+            },
+            {
+              "pairId": "yands-p06-s03",
+              "original": "再上，有石如双玉瓶。过此，山渐险。又二里，至能仁寺。",
+              "translation": "继续向上攀登，有一块巨石形状像是一对白玉瓶。过了这里，山势变得越来越险峻。又走了二里路，到达**能仁寺**。",
+              "keywords": [
+                "能仁寺"
+              ]
+            },
+            {
+              "pairId": "yands-p06-s04",
+              "original": "寺后有燕尾瀑，水从两石夹中泻下，形如燕尾。",
+              "translation": "能仁寺后面有**燕尾瀑**，溪水从两块巨石夹峙的缝隙中倾泻而下，形状就像燕子的尾巴。",
+              "keywords": [
+                "燕尾瀑"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "yands-p07",
+          "scene": "绝壁折返",
+          "shareImage": "/content/assets/you-yandangshan-riji/images/2-2.jpg",
+          "ambientAudio": "/content/assets/you-yandangshan-riji/audio/ambient-valley.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-yandangshan-riji/audio/yands-p01-male-classic.wav",
+            "female_classic": "/content/assets/you-yandangshan-riji/audio/yands-p01-female-classic.wav",
+            "male_calm": "/content/assets/you-yandangshan-riji/audio/yands-p01-male-calm.wav",
+            "female_warm": "/content/assets/you-yandangshan-riji/audio/yands-p01-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yands-p07-s01",
+              "original": "从此向上，路绝。导者曰：“从此可登雁湖，然石级苔滑，且多荆棘，无复人迹。”余强欲行。",
+              "translation": "从这里再往上走，路就断绝了。向导说：“从这里确实可以登上雁湖，但是石阶上长满青苔非常湿滑，而且长满了荆棘，早就没有人类行走的痕迹了。”我却执意一定要去。",
+              "keywords": [
+                "路绝",
+                "雁湖"
+              ]
+            },
+            {
+              "pairId": "yands-p07-s02",
+              "original": "上行二里，石壁陡绝。攀援草木而上，手足俱裂。",
+              "translation": "向上爬了二里路，眼前的石壁陡峭绝伦。只能紧紧抓住身边的草木向上攀爬，手和脚都磨裂了。",
+              "keywords": [
+                "陡绝",
+                "攀援"
+              ]
+            },
+            {
+              "pairId": "yands-p07-s03",
+              "original": "又一里，至一平台。下视深不可测，而上壁更峭。",
+              "translation": "又往上爬了一里，来到了一处平台。低头向下看深不可测，而上方的岩壁更加陡峭。",
+              "keywords": [
+                "平台"
+              ]
+            },
+            {
+              "pairId": "yands-p07-s04",
+              "original": "有一絙自上垂下，导者云：“此采药者所遗，登此可达顶。”余试之，絙朽，不可攀。复下，至能仁寺。",
+              "translation": "有一根粗绳子从上面垂挂下来，向导说：“这是采药人留下的，顺着这根绳子爬上去就能到达山顶。”我试了试，绳子已经腐朽了，根本无法攀抓。于是我们只好原路退下，回到了能仁寺。",
+              "keywords": [
+                "采药",
+                "絙朽"
+              ]
+            },
+            {
+              "pairId": "yands-p07-s05",
+              "original": "是日风雨大作。晚，宿能仁寺。",
+              "translation": "这一天风雨大作。到了晚上，住宿在能仁寺。",
+              "keywords": [
+                "风雨"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yands-part-04",
+      "heading": "第四部分：风雨登临雁湖顶，目极云海荒寒",
+      "paragraphs": [
+        {
+          "id": "yands-p08",
+          "scene": "穿云登顶",
+          "shareImage": "/content/assets/you-yandangshan-riji/images/2-3.jpg",
+          "ambientAudio": "/content/assets/you-yandangshan-riji/audio/ambient-waterfall.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-yandangshan-riji/audio/yands-p02-male-classic.wav",
+            "female_classic": "/content/assets/you-yandangshan-riji/audio/yands-p02-female-classic.wav",
+            "male_calm": "/content/assets/you-yandangshan-riji/audio/yands-p02-male-calm.wav",
+            "female_warm": "/content/assets/you-yandangshan-riji/audio/yands-p02-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yands-p08-s01",
+              "original": "十五日，雨止，云雾犹弥漫。",
+              "translation": "四月十五日，雨停了，但是云雾依然弥漫。",
+              "keywords": [
+                "云雾"
+              ]
+            },
+            {
+              "pairId": "yands-p08-s02",
+              "original": "由寺右登山，五里，过东石梁。石梁架两山夹间，下临百丈深涧，水声轰轰。",
+              "translation": "我们从寺庙的右侧开始登山，走了五里路，经过了**东石梁**。东石梁横架在两座山夹峙的中间，下方紧临着百丈深的陡峭山涧，水流声轰轰作响。",
+              "keywords": [
+                "东石梁"
+              ]
+            },
+            {
+              "pairId": "yands-p08-s03",
+              "original": "又五里，至常云峰下。山皆削壁，从石罅中仰登。",
+              "translation": "又走了五里，来到**常云峰**脚下。这里的山峰全是如刀削般的峭壁，我们只能从狭窄的石缝中抬头向上攀登。",
+              "keywords": [
+                "常云峰",
+                "石罅"
+              ]
+            },
+            {
+              "pairId": "yands-p08-s04",
+              "original": "又五里，至雁湖顶。",
+              "translation": "又走了五里，终于登上了**雁湖**之巅。",
+              "keywords": [
+                "雁湖顶"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "yands-p09",
+          "scene": "雁湖荒寒",
+          "shareImage": "/content/assets/you-yandangshan-riji/images/2-3.jpg",
+          "ambientAudio": "/content/assets/you-yandangshan-riji/audio/ambient-valley.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-yandangshan-riji/audio/yands-p01-male-classic.wav",
+            "female_classic": "/content/assets/you-yandangshan-riji/audio/yands-p01-female-classic.wav",
+            "male_calm": "/content/assets/you-yandangshan-riji/audio/yands-p01-male-calm.wav",
+            "female_warm": "/content/assets/you-yandangshan-riji/audio/yands-p01-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yands-p09-s01",
+              "original": "顶平广，周可十里。中有一大池，即雁湖也。",
+              "translation": "山顶地势平坦宽阔，方圆大约有十里。中间有一个巨大的水池，这就是著名的**雁湖**。",
+              "keywords": [
+                "雁湖"
+              ]
+            },
+            {
+              "pairId": "yands-p09-s02",
+              "original": "四山环绕，水澄碧，多水草。池旁有石刻“雁湖”二字。",
+              "translation": "四周的山峦环绕着它，湖水澄澈碧绿，长满了许多水草。池塘旁边有一块石头，上面刻着“雁湖”两个字。",
+              "keywords": [
+                "石刻"
+              ]
+            },
+            {
+              "pairId": "yands-p09-s03",
+              "original": "其地极高，秋雁多宿于此，故名。是日云雾四集，风冽如冬，不可久留。",
+              "translation": "这个地方地势极高，秋天的大雁大多在这里栖息宿夜，因此而得名。这一天四周的云雾不断聚集，山风像冬天一样寒冷刺骨，没办法久留。",
+              "keywords": [
+                "秋雁",
+                "风冽"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "yands-p10",
+          "scene": "飞瀑归途",
+          "shareImage": "/content/assets/you-yandangshan-riji/images/2-3.jpg",
+          "ambientAudio": "/content/assets/you-yandangshan-riji/audio/ambient-waterfall.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-yandangshan-riji/audio/yands-p02-male-classic.wav",
+            "female_classic": "/content/assets/you-yandangshan-riji/audio/yands-p02-female-classic.wav",
+            "male_calm": "/content/assets/you-yandangshan-riji/audio/yands-p02-male-calm.wav",
+            "female_warm": "/content/assets/you-yandangshan-riji/audio/yands-p02-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yands-p10-s01",
+              "original": "下山，五里，至西石梁。过梁，循溪而下，十里，至大龙湫。",
+              "translation": "顺着山路下山，走了五里，到达**西石梁**。走过西石梁，顺着溪流一路走下去，行走了十里，到达了**大龙湫**。",
+              "keywords": [
+                "西石梁",
+                "大龙湫"
+              ]
+            },
+            {
+              "pairId": "yands-p10-s02",
+              "original": "仰视飞瀑，如大练自天而落，冲入深潭，轰雷喷雪，震撼山谷。",
+              "translation": "抬头仰望那飞流的瀑布，就像一条巨大的白绢从天际坠落，狠狠地冲入深潭之中，声音如轰雷，水花如喷雪，剧烈地震撼着整个山谷。",
+              "keywords": [
+                "飞瀑",
+                "深潭"
+              ]
+            },
+            {
+              "pairId": "yands-p10-s03",
+              "original": "晚，复宿灵岩寺。",
+              "translation": "到了晚上，我们再次住宿在灵岩寺。",
+              "keywords": [
+                "灵岩寺"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yands-part-05",
+      "heading": "第五部分：再探真际显胜，别离雁宕",
+      "paragraphs": [
+        {
+          "id": "yands-p11",
+          "scene": "真际显胜",
+          "shareImage": "/content/assets/you-yandangshan-riji/images/2-3.jpg",
+          "ambientAudio": "/content/assets/you-yandangshan-riji/audio/ambient-valley.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-yandangshan-riji/audio/yands-p01-male-classic.wav",
+            "female_classic": "/content/assets/you-yandangshan-riji/audio/yands-p01-female-classic.wav",
+            "male_calm": "/content/assets/you-yandangshan-riji/audio/yands-p01-male-calm.wav",
+            "female_warm": "/content/assets/you-yandangshan-riji/audio/yands-p01-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yands-p11-s01",
+              "original": "十六日，自灵岩向西，过大罗岩。岩下有洞，广可容数百人。",
+              "translation": "四月十六日，我从灵岩寺出发向西行进，经过了**大罗岩**。悬崖下方有一个洞穴，宽敞得可以容纳几百人。",
+              "keywords": [
+                "大罗岩"
+              ]
+            },
+            {
+              "pairId": "yands-p11-s02",
+              "original": "又五里，至真际寺。寺后有含珠峰、照胆镜之胜。",
+              "translation": "又前行了五里，到达**真际寺**。寺庙后面有**含珠峰**、**照胆镜**等名胜。",
+              "keywords": [
+                "真际寺",
+                "含珠峰",
+                "照胆镜"
+              ]
+            },
+            {
+              "pairId": "yands-p11-s03",
+              "original": "十七日，由真际向北，过显胜门。两壁陡立，高百丈，相去仅数尺。仰视一线，幽邃如合。",
+              "translation": "四月十七日，从真际寺向北出发，穿过了**显胜门**。只见两面岩壁陡峭耸立，高大上百丈，彼此之间相距仅仅只有几尺宽。抬头仰望天空只有一线之隔，幽深静谧得仿佛要闭合起来一样。",
+              "keywords": [
+                "显胜门",
+                "一线"
+              ]
+            },
+            {
+              "pairId": "yands-p11-s04",
+              "original": "出显胜门，即雁宕北海也。",
+              "translation": "走出显胜门，就是雁荡山的后山了。",
+              "keywords": [
+                "雁宕北海"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "yands-p12",
+          "scene": "作别雁宕",
+          "shareImage": "/content/assets/you-yandangshan-riji/images/2-3.jpg",
+          "ambientAudio": "/content/assets/you-yandangshan-riji/audio/ambient-waterfall.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-yandangshan-riji/audio/yands-p02-male-classic.wav",
+            "female_classic": "/content/assets/you-yandangshan-riji/audio/yands-p02-female-classic.wav",
+            "male_calm": "/content/assets/you-yandangshan-riji/audio/yands-p02-male-calm.wav",
+            "female_warm": "/content/assets/you-yandangshan-riji/audio/yands-p02-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yands-p12-s01",
+              "original": "十八日，由显胜门还乐清，凡五十里。作别雁宕。",
+              "translation": "四月十八日，我们由显胜门返回**乐清**县城，总计行程五十里。自此，正式作别雁荡山。",
+              "keywords": [
+                "乐清",
+                "作别"
+              ]
             }
           ]
         }

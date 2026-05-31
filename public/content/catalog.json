@@ -20,15 +20,30 @@
     {
       "id": "vol-02",
       "title": "游雁宕山日记",
-      "description": "记雁宕诸峰、寺院、瀑流与山行路程。",
+      "description": "万历四十一年（1613年）四月初九至十八日，徐霞客游雁荡山，记奇峰怪石、飞瀑危崖、雁湖登顶及显胜门之胜。",
       "articles": [
         {
           "id": "you-yandangshan-riji",
           "title": "游雁宕山日记",
           "dynasty": "明",
           "author": "徐霞客",
-          "status": "sample",
+          "status": "complete",
           "order": 2
+        }
+      ]
+    },
+    {
+      "id": "vol-03",
+      "title": "游黄山日记",
+      "description": "万历四十四年（1616年）二月初二至十一日，徐霞客第一次游黄山，踏雪凿冰，记前海后海奇峰怪松与温泉胜境。",
+      "articles": [
+        {
+          "id": "you-huangshan-riji",
+          "title": "游黄山日记（第一次·徽州府）",
+          "dynasty": "明",
+          "author": "徐霞客",
+          "status": "complete",
+          "order": 3
         }
       ]
     }

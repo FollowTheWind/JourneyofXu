@@ -1,16 +1,12 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   ArrowRight,
   BookOpen,
   ChevronLeft,
-  Headphones,
-  ImageDown,
-  Languages,
   Menu,
   PanelLeftClose,
 } from "lucide-react";
 import { ArticleReader } from "./components/ArticleReader";
-import { AudioPlayer } from "./components/AudioPlayer";
 import { CatalogPanel } from "./components/CatalogPanel";
 import { ReadingSettings } from "./components/ReadingSettings";
 import { ShareImageComposer } from "./components/ShareImageComposer";
@@ -21,27 +17,11 @@ import type {
   CatalogArticle,
   Catalog,
   CatalogVolume,
-  Paragraph,
   ReadingMode,
   SelectedPassage,
-  VoiceKey,
 } from "./types";
 
 const savedArticleKey = "journey-of-xu:last-article";
-
-function findParagraph(article: Article | null, pairId?: string) {
-  if (!article) {
-    return undefined;
-  }
-  for (const part of article.parts) {
-    for (const paragraph of part.paragraphs) {
-      if (!pairId || paragraph.pairs.some((pair) => pair.pairId === pairId)) {
-        return paragraph;
-      }
-    }
-  }
-  return article.parts[0]?.paragraphs[0];
-}
 
 function flattenCatalog(catalog: Catalog) {
   return catalog.volumes.flatMap((volume) =>
@@ -74,28 +54,18 @@ function HomePage({
   return (
     <section className="home-view" aria-label="首页">
       <div className="home-hero">
-        <p className="eyebrow">明代山水行旅</p>
         <h2>徐霞客游记</h2>
         <p>
-          《徐霞客游记》以亲历山川为经，以日记笔法为纬，记录徐霞客数十年间的道路、山势、
-          水文、寺观与风土。它既是古典游记的高峰，也是中国地理观察传统中极具现场感的一部
-          作品。
+          一个明朝人，没考功名，没做官，把一辈子花在了路上。
+          <br />
+          三十年，四万里，一双草鞋走遍中国。
+          <br />
+          没人逼他，他只是想亲眼看看这个世界。
+          <br />
+          他写下的，就是《徐霞客游记》。
+          <br />
+          在这里，跟他走一程。
         </p>
-      </div>
-
-      <div className="home-overview" aria-label="阅读入口概览">
-        <div>
-          <span>{entries.length}</span>
-          <small>篇游记</small>
-        </div>
-        <div>
-          <span>句级</span>
-          <small>原文译文对照</small>
-        </div>
-        <div>
-          <span>声景</span>
-          <small>段落朗读</small>
-        </div>
       </div>
 
       <section className="entry-section" aria-label="选择游记文章">
@@ -146,11 +116,9 @@ export default function App() {
   const [catalog, setCatalog] = useState<Catalog | null>(null);
   const [article, setArticle] = useState<Article | null>(null);
   const [activeArticleId, setActiveArticleId] = useState<string>();
-  const [highlightedPairId, setHighlightedPairId] = useState<string>();
+  const [highlightedPairIds, setHighlightedPairIds] = useState<Set<string>>(new Set());
   const [mode, setMode] = useState<ReadingMode>("parallel");
   const [fontScale, setFontScale] = useState(1);
-  const [voice, setVoice] = useState<VoiceKey>("male_classic");
-  const [ambientEnabled, setAmbientEnabled] = useState(true);
   const [selectedPassage, setSelectedPassage] = useState<SelectedPassage | null>(null);
   const [isCatalogOpen, setIsCatalogOpen] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -162,10 +130,10 @@ export default function App() {
         const route = parseHashRoute();
         if (route.articleId) {
           setActiveArticleId(route.articleId);
-          setHighlightedPairId(route.pairId);
+          setHighlightedPairIds(route.pairId ? new Set([route.pairId]) : new Set());
         } else {
           setActiveArticleId(undefined);
-          setHighlightedPairId(undefined);
+          setHighlightedPairIds(new Set());
         }
       })
       .catch((loadError) => setError(loadError.message));
@@ -179,7 +147,7 @@ export default function App() {
       } else {
         setActiveArticleId(undefined);
       }
-      setHighlightedPairId(route.pairId);
+      setHighlightedPairIds(route.pairId ? new Set([route.pairId]) : new Set());
     }
     window.addEventListener("hashchange", onHashChange);
     return () => window.removeEventListener("hashchange", onHashChange);
@@ -200,23 +168,24 @@ export default function App() {
   }, [activeArticleId]);
 
   useEffect(() => {
-    if (highlightedPairId) {
+    if (highlightedPairIds.size > 0) {
+      const firstId = highlightedPairIds.values().next().value;
       window.requestAnimationFrame(() => {
-        document
-          .querySelector(`[data-pair-id="${highlightedPairId}"]`)
-          ?.scrollIntoView({ behavior: "smooth", block: "center" });
+        const el = document.querySelector(`[data-pair-id="${firstId}"]`);
+        if (!el) return;
+        // 仅在元素不可见时才滚动，避免干扰用户后续拖选
+        const rect = el.getBoundingClientRect();
+        const center = rect.top + rect.height / 2;
+        if (center < 0 || center > window.innerHeight) {
+          el.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
       });
     }
-  }, [article, highlightedPairId]);
-
-  const activeParagraph = useMemo(
-    () => findParagraph(article, highlightedPairId),
-    [article, highlightedPairId],
-  );
+  }, [article, highlightedPairIds]);
 
   const handleArticleSelect = useCallback((articleId: string) => {
     setActiveArticleId(articleId);
-    setHighlightedPairId(undefined);
+    setHighlightedPairIds(new Set());
     window.location.hash = articleHash(articleId);
     window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "smooth" }));
     if (window.innerWidth < 920) {
@@ -226,26 +195,30 @@ export default function App() {
 
   const handleHomeSelect = useCallback(() => {
     setActiveArticleId(undefined);
-    setHighlightedPairId(undefined);
+    setHighlightedPairIds(new Set());
     setSelectedPassage(null);
     window.history.pushState(null, "", window.location.pathname + window.location.search);
     window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "smooth" }));
   }, []);
 
   const handlePairFocus = useCallback(
-    (pairId: string) => {
+    (pairIds: Set<string>) => {
       if (!article) {
         return;
       }
-      setHighlightedPairId(pairId);
-      window.history.replaceState(null, "", articleHash(article.id, pairId));
+      setHighlightedPairIds(pairIds);
+      const firstId = pairIds.values().next().value;
+      if (firstId) {
+        window.history.replaceState(null, "", articleHash(article.id, firstId));
+      }
     },
     [article],
   );
 
   return (
     <main className="app-shell">
-      <header className="topbar">
+      {activeArticleId ? (
+        <header className="topbar">
         <button
           className="icon-button"
           type="button"
@@ -256,21 +229,10 @@ export default function App() {
           {isCatalogOpen ? <PanelLeftClose size={20} /> : <Menu size={20} />}
         </button>
         <button className="brand-button" type="button" onClick={handleHomeSelect}>
-          <p className="eyebrow">山水游记阅读器</p>
           <h1>徐霞客游记</h1>
         </button>
-        <div className="topbar-meta" aria-label="功能概览">
-          <span title="原文译文对照">
-            <Languages size={17} /> 对照
-          </span>
-          <span title="段落朗读">
-            <Headphones size={17} /> 朗读
-          </span>
-          <span title="分享图片">
-            <ImageDown size={17} /> 分享
-          </span>
-        </div>
       </header>
+      ) : null}
 
       {error ? <div className="error-banner">{error}</div> : null}
 
@@ -293,12 +255,8 @@ export default function App() {
             <ReadingSettings
               mode={mode}
               fontScale={fontScale}
-              voice={voice}
-              ambientEnabled={ambientEnabled}
               onModeChange={setMode}
               onFontScaleChange={setFontScale}
-              onVoiceChange={setVoice}
-              onAmbientEnabledChange={setAmbientEnabled}
             />
           ) : null}
 
@@ -307,7 +265,7 @@ export default function App() {
           ) : article ? (
             <ArticleReader
               article={article}
-              highlightedPairId={highlightedPairId}
+              highlightedPairIds={highlightedPairIds}
               mode={mode}
               fontScale={fontScale}
               onPairFocus={handlePairFocus}
@@ -322,16 +280,11 @@ export default function App() {
         </section>
 
         {activeArticleId ? (
-          <aside className="tool-column" aria-label="音频与分享工具">
+          <aside className="tool-column" aria-label="分享工具">
             <button className="back-home" type="button" onClick={handleHomeSelect}>
               <ChevronLeft size={17} />
               返回首页
             </button>
-            <AudioPlayer
-              paragraph={activeParagraph as Paragraph | undefined}
-              voice={voice}
-              ambientEnabled={ambientEnabled}
-            />
             <ShareImageComposer selectedPassage={selectedPassage} />
           </aside>
         ) : null}

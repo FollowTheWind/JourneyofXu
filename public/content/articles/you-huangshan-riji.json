@@ -1,0 +1,911 @@
+{
+  "id": "you-huangshan-riji",
+  "title": "游黄山日记（第一次·徽州府）",
+  "sourceNote": "全文底本，完整收录《游黄山日记（第一次）》十一大部分，含原文与现代汉语逐句翻译。此为徐霞客于明万历四十四年（1616年）第一次游历黄山的完整记录。",
+  "assetBase": "/content/assets/you-huangshan-riji",
+  "intro": "徐霞客一生曾两次游历黄山。这段日记正是他于明万历四十四年（1616年）农历二月初二至二月十一日第一次游历黄山的完整记录。当时正值深冬凝寒，徐霞客率仆从踏雪寻幽，历经冰雪险阻，详细记录了黄山前后海的奇峰、怪松与温泉景观。",
+  "parts": [
+    {
+      "id": "yhsk-part-01",
+      "heading": "初二日：自白岳下山，趋至高桥",
+      "paragraphs": [
+        {
+          "id": "yhsk-p01",
+          "scene": "自白岳下山",
+          "shareImage": "/content/assets/you-huangshan-riji/images/3-1.jpg",
+          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-mountain.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
+            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
+            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
+            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yhsk-p01-s01",
+              "original": "初二日 自白岳下山，十里，循麓而西，抵南溪桥。",
+              "translation": "二月初二这一天，我从白岳山（齐云山）下山，走了十里路，顺着山脚向西前行，抵达**南溪桥**。",
+              "keywords": [
+                "白岳",
+                "南溪桥"
+              ]
+            },
+            {
+              "pairId": "yhsk-p01-s02",
+              "original": "渡大溪，循别溪，依山北行，十里，两山峭逼如门，溪为之束。",
+              "translation": "渡过一条大溪后，顺着另一条溪流、依傍着山峦向北前行。走了十里，两座山峰陡峭对峙如同一道大门，溪流被它们夹束得十分狭窄。",
+              "keywords": [
+                "大溪",
+                "峭逼"
+              ]
+            },
+            {
+              "pairId": "yhsk-p01-s03",
+              "original": "越而下，平畴颇广。",
+              "translation": "翻越过去向下走，眼前的平坦田野非常广阔。",
+              "keywords": [
+                "平畴"
+              ]
+            },
+            {
+              "pairId": "yhsk-p01-s04",
+              "original": "二十里，为猪坑。",
+              "translation": "又走了二十里，到达**猪坑**。",
+              "keywords": [
+                "猪坑"
+              ]
+            },
+            {
+              "pairId": "yhsk-p01-s05",
+              "original": "由小路登虎岭，路甚峻。十里，至岭；五里，越其麓。",
+              "translation": "从小路攀登**虎岭**，山路非常陡峭。走十里到达山岭顶部；再走五里，翻过了它的山脚。",
+              "keywords": [
+                "虎岭"
+              ]
+            },
+            {
+              "pairId": "yhsk-p01-s06",
+              "original": "北望黄山诸峰，片片可掇。",
+              "translation": "向北眺望**黄山**的重重山峰，仿佛一片片近在眼前、伸手可摘。",
+              "keywords": [
+                "黄山",
+                "可掇"
+              ]
+            },
+            {
+              "pairId": "yhsk-p01-s07",
+              "original": "又三里，为古楼坳，溪甚阔，水涨无梁，木片弥布一溪，涉之甚难。",
+              "translation": "又走了三里，到达**古楼坳**，溪面非常宽阔，因为溪水上涨而没有桥梁，满溪都漂浮分布着木片，涉水渡溪非常困难。",
+              "keywords": [
+                "古楼坳"
+              ]
+            },
+            {
+              "pairId": "yhsk-p01-s08",
+              "original": "二里，宿高桥。",
+              "translation": "又走了二里，住宿在**高桥**。",
+              "keywords": [
+                "高桥"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yhsk-part-02",
+      "heading": "初三日：入汤口涉雪，祥符寺浴汤泉",
+      "paragraphs": [
+        {
+          "id": "yhsk-p02",
+          "scene": "汤泉浴雪",
+          "shareImage": "/content/assets/you-huangshan-riji/images/3-1.jpg",
+          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-stream.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
+            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
+            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
+            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yhsk-p02-s09",
+              "original": "初三日 随樵者行久之，越岭二重，下而复上。又越一重，两岭俱峻，曰双岭。",
+              "translation": "二月初三这一天，我跟随砍柴的人走了很久，翻越了两重山岭，忽下忽上。接着又翻越了一重，这两重山岭都十分险峻，合称“双岭”。",
+              "keywords": [
+                "双岭"
+              ]
+            },
+            {
+              "pairId": "yhsk-p02-s10",
+              "original": "共十五里，过江村。二十里，抵汤口，香溪、温泉诸水所由出者。",
+              "translation": "总共走了十五里，路过江村。又走了二十里，抵达**汤口**，这里是香溪、温泉等各路溪水流出的地方。",
+              "keywords": [
+                "汤口",
+                "香溪"
+              ]
+            },
+            {
+              "pairId": "yhsk-p02-s11",
+              "original": "折而入山，沿溪渐上，雪且没趾。五里，抵祥符寺。",
+              "translation": "我们折向进入黄山，沿着溪流渐渐往上攀登，此时积雪已经没过了脚趾。走了五里，抵达**祥符寺**。",
+              "keywords": [
+                "祥符寺"
+              ]
+            },
+            {
+              "pairId": "yhsk-p02-s12",
+              "original": "汤泉在隔溪，遂俱解衣赴汤池。",
+              "translation": "温泉在溪流的对岸，于是我们都脱下衣服前往温泉池。",
+              "keywords": [
+                "汤泉"
+              ]
+            },
+            {
+              "pairId": "yhsk-p02-s13",
+              "original": "池前临溪，后倚壁，三面石甃，上环石如桥。汤深三尺，时凝寒未解，而汤气郁然，水泡池底汩汩起，气本香冽，黄贞父谓其不及盘山，以汤口、焦村孔道，浴者太杂遝也。",
+              "translation": "温泉池前面临着溪流，后面紧靠着石壁，三面用石头砌成，上方有环绕的石头如同拱桥。池水深三尺，冬末凝寒未消，而温泉热气浓郁，水泡从池底汩汩冒出来。泉水的气味香醇清冽，文人**黄贞父**曾说它比不上盘山的温泉，这是因为汤口和焦村是交通要道，来这里洗澡的人太杂乱拥挤了。",
+              "keywords": [
+                "黄贞父",
+                "盘山"
+              ]
+            },
+            {
+              "pairId": "yhsk-p02-s14",
+              "original": "浴毕，返寺。僧挥印引登莲花庵，蹑雪循涧以上。",
+              "translation": "洗完澡后，我们回到寺庙。和尚**挥印**引导我们去登莲花庵，踩着雪顺着山涧往上走。",
+              "keywords": [
+                "挥印",
+                "莲花庵"
+              ]
+            },
+            {
+              "pairId": "yhsk-p02-s15",
+              "original": "涧水三转：下注而深泓者，曰白龙潭；再上而停涵石间者，曰丹井。井旁有石突起，曰药臼，曰药铫。",
+              "translation": "涧水有三处转折：向下倾注形成深潭的，叫做**白龙潭**；再往上蓄积在岩石之间的，叫做**丹井**。井旁有突起的石头，分别叫**药臼**和**药铫**。",
+              "keywords": [
+                "白龙潭",
+                "丹井",
+                "药臼"
+              ]
+            },
+            {
+              "pairId": "yhsk-p02-s16",
+              "original": "宛转随溪，群峰环耸，木石掩映。如此一里，得一庵，僧印我他出，不能登其堂。堂中香炉及钟鼓架，俱天然古木根所为。遂返寺宿。",
+              "translation": "山路顺着溪流宛转延伸，群峰在四周环绕耸立，树木与岩石交相掩映。像这样走了一里路，看到一座庵堂，主持和尚**印我**恰好外出，堂屋中的香炉及钟鼓架全部用天然古树根做成。于是我们返回祥符寺住宿。",
+              "keywords": [
+                "印我",
+                "古木根"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yhsk-part-03",
+      "heading": "初四日：风雪阻途，静坐听雪溜",
+      "paragraphs": [
+        {
+          "id": "yhsk-p03",
+          "scene": "听雪溜竟日",
+          "shareImage": "/content/assets/you-huangshan-riji/images/3-1.jpg",
+          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-snow.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
+            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
+            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
+            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yhsk-p03-s17",
+              "original": "初四日 兀坐听雪溜竟日。",
+              "translation": "二月初四这一天，我整天静坐着，听屋檐下的积雪融化滴落的声音。",
+              "keywords": [
+                "兀坐",
+                "雪溜"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yhsk-part-04",
+      "heading": "初五日：雪阻慈光寺，卧榻避恶灶",
+      "paragraphs": [
+        {
+          "id": "yhsk-p04",
+          "scene": "慈光受阻",
+          "shareImage": "/content/assets/you-huangshan-riji/images/3-2.jpg",
+          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-snow.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
+            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
+            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
+            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yhsk-p04-s18",
+              "original": "初五日 云气甚恶，余强卧至午起。挥印言慈光寺颇近，令其徒引。",
+              "translation": "二月初五这一天，山上的云雾天气非常恶劣，我勉强躺到中午才起床。和尚挥印说**慈光寺**离这里挺近的，便让他的徒弟为我们引路。",
+              "keywords": [
+                "慈光寺"
+              ]
+            },
+            {
+              "pairId": "yhsk-p04-s19",
+              "original": "过汤池，仰见一崖，中悬鸟道，两旁泉泻如练。余即从此攀跻上；泉光云气，撩绕衣裾。",
+              "translation": "经过温泉池时，抬头看见一座悬崖，中间悬挂着一条极为险峻的鸟道，两旁有泉水如白绢般倾泻而下。我当即从这里攀援登了上去；泉水的光芒和山间的云气，随风飘拂缭绕着我的衣襟。",
+              "keywords": [
+                "鸟道",
+                "泉泻"
+              ]
+            },
+            {
+              "pairId": "yhsk-p04-s20",
+              "original": "已转而右，则茅庵上下，磬韵香烟，穿石而出，即慈光寺也。寺旧名硃砂庵。",
+              "translation": "随后向右转弯，只见几座茅庵错落分布在上下山路上，磬的声音和香烟的雾气穿过岩石飘散出来，这便是慈光寺了。这座寺庙过去名叫**硃砂庵**。",
+              "keywords": [
+                "硃砂庵"
+              ]
+            },
+            {
+              "pairId": "yhsk-p04-s21",
+              "original": "比丘为余言：“山顶诸静室，径为雪封者两月。今早遣人送粮，山半，雪没腰而返。”",
+              "translation": "寺里的和尚对我说：“山顶上的那些静修室，山路已经被大雪封锁了两个月。今天早上派人上山送粮食，走到半山腰，积雪没过了腰部，只好退了回来。”",
+              "keywords": [
+                "雪封",
+                "静室"
+              ]
+            },
+            {
+              "pairId": "yhsk-p04-s22",
+              "original": "余兴大阻，由大路二里下山，遂引被卧。",
+              "translation": "我的兴致大受打击，于是顺着大路走下山两里路，回到住处拉起被子睡觉。",
+              "keywords": [
+                "兴阻"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yhsk-part-05",
+      "heading": "初六日（上）：冰雪登天门，宿后海狮子林",
+      "paragraphs": [
+        {
+          "id": "yhsk-p05",
+          "scene": "凿冰登天门",
+          "shareImage": "/content/assets/you-huangshan-riji/images/3-2.jpg",
+          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-snow.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
+            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
+            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
+            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yhsk-p05-s23",
+              "original": "初六日 天色甚朗，觅导者各携筇上山，过慈光寺，从左上。",
+              "translation": "二月初六这一天，天气非常晴朗，我们找了向导，各人拄着竹杖登山。路过慈光寺后，从左侧向上攀登。",
+              "keywords": [
+                "天色甚朗"
+              ]
+            },
+            {
+              "pairId": "yhsk-p05-s24",
+              "original": "石峰环夹，其中石级为积雪所平，一望如玉。",
+              "translation": "石峰在两旁环绕夹峙，其中的石阶已经被积雪填平，放眼望去如同一片**白玉**。",
+              "keywords": [
+                "积雪如玉"
+              ]
+            },
+            {
+              "pairId": "yhsk-p05-s25",
+              "original": "疏木茸茸中，仰见群峰盘结，天都独巍然上挺。",
+              "translation": "在稀疏而密集的树木丛中，抬头看见群峰盘旋交结，唯独**天都峰**巍然拔地而起，向高空挺立。",
+              "keywords": [
+                "天都峰"
+              ]
+            },
+            {
+              "pairId": "yhsk-p05-s26",
+              "original": "数里，级愈峻，雪愈深，其阴处冻雪成冰，坚滑不容着趾。",
+              "translation": "走了几里路，石阶越来越陡峭，积雪也越来越深，背阴地方的积雪已经冻成了坚冰，坚硬湿滑得让人无法落脚。",
+              "keywords": [
+                "冻雪成冰"
+              ]
+            },
+            {
+              "pairId": "yhsk-p05-s27",
+              "original": "余独前，持杖凿冰，得一孔，置前趾，再凿一孔，以移后趾；从行者俱循此法得度。",
+              "translation": "我独自走在最前面，手持竹杖凿击冰面，凿出一个孔后把前脚趾踩进去，再凿一个孔用来移动后脚；跟随我前行的人全都依照这个方法才渡过了险境。",
+              "keywords": [
+                "凿冰",
+                "杖"
+              ]
+            },
+            {
+              "pairId": "yhsk-p05-s28",
+              "original": "上至平冈，则莲花、云门诸峰，争奇竞秀，若为天都拥卫者。",
+              "translation": "登上平坦的山冈后，只见**莲花峰**、**云门峰**等诸座山峰争奇竞秀，仿佛都在拱卫着天都峰。",
+              "keywords": [
+                "莲花峰",
+                "云门峰"
+              ]
+            },
+            {
+              "pairId": "yhsk-p05-s29",
+              "original": "由此而入，绝巘危崖，尽皆怪松悬结，高者不盈丈，低仅数寸，平顶短鬣，盘根虬干，愈短愈老，愈小愈奇，不意奇山中又有此奇品也！",
+              "translation": "从这里走进去，极高的山巅和危险的悬崖上，全都有**怪松**悬挂生长着，高的不超过一丈，低的只有几寸，它们头顶平整、松针短促，树根盘错、树干弯曲如龙，越短的越显苍老，越小的越显奇特，没想到这奇绝的山中竟然还有这等奇妙的物种！",
+              "keywords": [
+                "怪松",
+                "虬干"
+              ]
+            },
+            {
+              "pairId": "yhsk-p05-s30",
+              "original": "松石交映间，冉冉僧一群从天而下，俱合掌言：“阻雪山中已三月，今以觅粮勉到此。公等何由得上也？”",
+              "translation": "在青松与怪石交相映衬之间，只见一群和尚缓缓地从高处走下来，他们都双手合掌对我说：“我们被大雪困在山中已经三个月了，今天为了寻找粮食才勉强走到这里。你们是怎么能爬上来的呢？”",
+              "keywords": [
+                "僧从天降",
+                "阻雪"
+              ]
+            },
+            {
+              "pairId": "yhsk-p05-s31",
+              "original": "且言：“我等前海诸庵，俱已下山，后海山路尚未通，惟莲花洞可行耳。”",
+              "translation": "他们接着说：“我们前海景区的各个庵堂的和尚，都已经下山了，后海景区的山路目前还没有开通，只有**莲花洞**这条路可以通过。”",
+              "keywords": [
+                "莲花洞",
+                "前海",
+                "后海"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yhsk-part-06",
+      "heading": "初六日（下）：登光明顶饱览丞相原，夜探石笋矼",
+      "paragraphs": [
+        {
+          "id": "yhsk-p06",
+          "scene": "光明顶石笋矼",
+          "shareImage": "/content/assets/you-huangshan-riji/images/3-3.jpg",
+          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-mountain.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
+            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
+            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
+            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yhsk-p06-s32",
+              "original": "已而从天都峰侧攀而上，透峰罅而下，东转，即莲花洞路也。",
+              "translation": "随后我们从天都峰的侧面攀援而上，穿过山峰的裂缝向下走，向东转弯，这便是前往**莲花洞**的路了。",
+              "keywords": [
+                "天都峰"
+              ]
+            },
+            {
+              "pairId": "yhsk-p06-s33",
+              "original": "余急于光明顶、石笋矼之胜，遂循莲花峰而北，上下数次，至天门。",
+              "translation": "我急切地想要去饱览**光明顶**和**石笋矼**的胜景，于是沿着莲花峰向北前行，忽上忽下翻越了数次，到达**天门**。",
+              "keywords": [
+                "光明顶",
+                "石笋矼",
+                "天门"
+              ]
+            },
+            {
+              "pairId": "yhsk-p06-s34",
+              "original": "两壁夹立，中阔摩肩，高数十丈，仰面而度，阴森悚骨。",
+              "translation": "只见两面岩壁并排夹立，中间的宽度只能容人擦肩而过，高达数十丈，抬头仰面走过这里，阴冷避光得让人**毛骨悚然**。",
+              "keywords": [
+                "摩肩",
+                "悚骨"
+              ]
+            },
+            {
+              "pairId": "yhsk-p06-s35",
+              "original": "其内积雪更深，凿冰上跻；过此，得平顶，即所谓前海也。",
+              "translation": "天门内部的积雪更加深厚，我们凿击冰面向上攀登；通过这里后，得到了一片平坦的山顶，这便是人们所说的**前海**。",
+              "keywords": [
+                "前海"
+              ]
+            },
+            {
+              "pairId": "yhsk-p06-s36",
+              "original": "由此更上一峰，至平天矼。矼之兀突独耸者，为光明顶。由矼而下，即所谓后海也。",
+              "translation": "从这里再往上登上一座山峰，到达**平天矼**。平天矼上突兀独立高耸的山峰，就是光明顶。从矼上向下走，就是**后海**。",
+              "keywords": [
+                "平天矼",
+                "后海"
+              ]
+            },
+            {
+              "pairId": "yhsk-p06-s37",
+              "original": "盖平天矼阳为前海，阴为后海，乃极高处；四面皆峻坞，此独若平地。",
+              "translation": "大抵平天矼的南坡为前海，北坡为后海，这里是黄山的极高处；四面都是险峻的山谷，唯独这里像平地一样。",
+              "keywords": [
+                "前海",
+                "后海"
+              ]
+            },
+            {
+              "pairId": "yhsk-p06-s38",
+              "original": "前海之前，天都、莲花二峰最峻；其阳属徽之歙，其阴属宁之太平。",
+              "translation": "在前海的前方，天都、莲花两座山峰最为险峻；它们的南面属于徽州府的**歙县**，北面属于宁国府的**太平县**。",
+              "keywords": [
+                "歙县",
+                "太平"
+              ]
+            },
+            {
+              "pairId": "yhsk-p06-s39",
+              "original": "余至平天矼，欲望光明顶而上，路已三十里，腹甚枵，遂入矼后一庵。",
+              "translation": "我来到平天矼，想要登光明顶，但此时已经走了三十里路，肚子非常饥饿，于是进入平天矼后面的一座庵堂。",
+              "keywords": [
+                "三十里"
+              ]
+            },
+            {
+              "pairId": "yhsk-p06-s40",
+              "original": "庵僧俱踞石向阳，主僧曰智空，见客色饥，先以粥饷。且曰：“新日太皎，恐非老晴。”",
+              "translation": "庵里的和尚都蹲坐在石头上晒太阳，主持和尚法号**智空**，看到我们面带饥色，便先用粥来款待我们。他说：“刚出的太阳太刺眼了，恐怕不是能持久的晴天。”",
+              "keywords": [
+                "智空"
+              ]
+            },
+            {
+              "pairId": "yhsk-p06-s41",
+              "original": "因指一僧谓余曰：“公有余力，可先登光明顶而后中食，则今日犹可抵石笋矼，宿是师处矣。”",
+              "translation": "于是他指向一个和尚对我说：“您如果还有余力，可以先登上光明顶然后再吃午饭，那么今天就还能赶到石笋矼，住宿在这位师父那里了。”",
+              "keywords": [
+                "光明顶"
+              ]
+            },
+            {
+              "pairId": "yhsk-p06-s42",
+              "original": "余如言登顶，则天都、莲花并肩其前，翠微、三海门环绕于后；下瞰绝壁峭岫，罗列坞中，即丞相原也。",
+              "translation": "我按照他的话登上了光明顶，只见天都峰、莲花峰并肩耸立在前方，翠微峰、三海门环绕在后方；向下俯瞰，陡峭的绝壁罗列山谷之中，那便是**丞相原**。",
+              "keywords": [
+                "丞相原",
+                "翠微峰"
+              ]
+            },
+            {
+              "pairId": "yhsk-p06-s43",
+              "original": "顶前一石伏而复起，势若中断，独悬坞中。上有怪松盘盖。余侧身攀踞其上，而浔阳踞大顶相对，各夸胜绝。",
+              "translation": "山顶前方有一块巨石沉下去后又隆起，态势就像从中间断开了一样，独自悬挂在山谷之中。石头上有**怪松**如盘盖般覆盖着。我侧着身子爬上去蹲坐，而同行的朋友**浔阳**则蹲坐在大山顶上与我相对，各自赞叹所见景观的奇绝。",
+              "keywords": [
+                "浔阳",
+                "怪松"
+              ]
+            },
+            {
+              "pairId": "yhsk-p06-s44",
+              "original": "下入庵，黄粱已熟。饭后，北向过一岭，踯躅菁莽中，入一庵，曰狮子林，即智空所指宿处。主僧霞光，已待我庵前矣。",
+              "translation": "走下光明顶回到庵堂，午饭已经煮熟了。饭后向北越过一座山岭，在繁茂的杂草丛中艰难前行，进入一座庵堂，名叫**狮子林**，也就是智空所指的住宿地方。主持和尚**霞光**，已经等候在庵门前了。",
+              "keywords": [
+                "狮子林",
+                "霞光"
+              ]
+            },
+            {
+              "pairId": "yhsk-p06-s45",
+              "original": "遂指庵北二峰曰：“公可先了此胜。”从之。俯窥其阴，则乱峰列岫，争奇并起；",
+              "translation": "他随即指向庵堂北面的两座山峰说：“您可以先去游览这两处胜景。”我听从了他的建议。低头俯瞰山峰的背阴处，只见乱峰错落、山峦排列，争奇竞秀并迎面拔起；",
+              "keywords": [
+                "乱峰列岫"
+              ]
+            },
+            {
+              "pairId": "yhsk-p06-s46",
+              "original": "循之西，崖忽中断，架木连之，上有松一株，可攀引而度，所谓接引崖也。",
+              "translation": "顺着这里向西走，悬崖忽然从中间断开，中间架着木头将两边连接起来，上方有一株松树，可以伸手攀抓着走过去，这便是所谓的**接引崖**。",
+              "keywords": [
+                "接引崖"
+              ]
+            },
+            {
+              "pairId": "yhsk-p06-s47",
+              "original": "度崖，穿石罅而上，乱石危缀间，构木为室，其中亦可置足，然不如踞石下窥更雄胜耳。",
+              "translation": "度过悬崖，穿过石头的缝隙向上爬，在乱石危险堆叠之间有人搭建了木屋，其中也可以立足，但是远不如蹲坐在岩石上向下俯瞰来得雄伟壮丽。",
+              "keywords": [
+                "石罅"
+              ]
+            },
+            {
+              "pairId": "yhsk-p06-s48",
+              "original": "下崖，循而东，里许，为石笋矼。矼脊斜亘，两夹悬坞中，乱峰森罗，其西一面，即接引崖所窥者。",
+              "translation": "走下悬崖，顺着山路向东走一里左右，就是**石笋矼**。石笋矼的山脊斜向横亘，两旁夹在悬空的山谷中，乱峰如森林般罗列，它的西面那一侧，也就是在接引崖所俯瞰到的景观。",
+              "keywords": [
+                "石笋矼"
+              ]
+            },
+            {
+              "pairId": "yhsk-p06-s49",
+              "original": "矼侧一峰突起，多奇石怪松，登之俯瞰壑中，正与接引崖对瞰，峰回岫转，顿改前观。",
+              "translation": "石笋矼侧面有一座山峰突地拔起，上面有很多奇石和怪松，登上这座山峰向下俯瞰山谷，正好与接引崖相对对瞰，山峰回环、山峦流转，顿时改变了刚才所看到的景观。",
+              "keywords": [
+                "奇石怪松"
+              ]
+            },
+            {
+              "pairId": "yhsk-p06-s50",
+              "original": "下峰，则落照拥树，谓明晴可卜，踊跃归庵。",
+              "translation": "走下山峰，只见落日的余晖笼罩着树木，大家都以为明天一定会是晴天，于是**欢天喜地**地回到庵堂。",
+              "keywords": [
+                "落照",
+                "踊跃"
+              ]
+            },
+            {
+              "pairId": "yhsk-p06-s51",
+              "original": "霞光设茶，引登前楼。西望碧痕一缕，余疑山影，僧谓：“山影夜望甚近，此当是云气。”余默然，知为雨兆也。",
+              "translation": "霞光和尚准备了茶水，引导我们登上前面的楼阁。向西望去有一缕青翠的痕迹，我怀疑是山的影子，和尚说：“山的影子在夜里看过去非常近，这应当是云气。”我沉默不语，心里明白这是要**下雨的征兆**。",
+              "keywords": [
+                "碧痕",
+                "雨兆"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yhsk-part-07",
+      "heading": "初七日：雾赏扰龙松，踩雪下松谷庵",
+      "paragraphs": [
+        {
+          "id": "yhsk-p07",
+          "scene": "扰龙松与松谷庵",
+          "shareImage": "/content/assets/you-huangshan-riji/images/3-4.jpg",
+          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-stream.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
+            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
+            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
+            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yhsk-p07-s52",
+              "original": "初七日 四山雾合。少顷，庵之东北已开，西南腻甚，若以庵为界者；即狮子峰亦在时出时没间。",
+              "translation": "二月初七这一天，四周的大山全都被大雾笼罩。不一会儿，庵堂的东北方向雾气已经散开，而西南方向却雾气极其浓厚，仿佛以这座庵堂为分界线一样；连**狮子峰**也在大雾中时隐时现。",
+              "keywords": [
+                "狮子峰",
+                "雾合"
+              ]
+            },
+            {
+              "pairId": "yhsk-p07-s53",
+              "original": "晨餐后，由接引崖践雪下。坞半一峰突起，上有一松，裂石而出，巨干高不及二尺，而斜拖曲结，蟠翠三丈余，其根穿石上下，几与峰等，所谓“扰龙松”是也。",
+              "translation": "吃过早饭后，我们从接引崖踩着雪走下去。在山谷的半腰处有一座山峰突兀拔起，上面有一株松树破开岩石生长出来，巨大的树干高度还不到二尺，但是向侧面斜斜地拖拽、弯曲交结，苍翠的枝叶盘旋舒展达三丈多宽，它的树根穿透岩石上下延伸，几乎与这座山峰一样长，这便是所谓的**扰龙松**。",
+              "keywords": [
+                "扰龙松"
+              ]
+            },
+            {
+              "pairId": "yhsk-p07-s54",
+              "original": "攀玩移时，望狮子峰已出，遂杖而西。是峰在庵西南，为案山。",
+              "translation": "攀抓赏玩了很久，望见狮子峰已经从雾中显露出来，于是我拄着竹杖向西走去。这座山峰在庵堂的西南面，是**案山**。",
+              "keywords": [
+                "案山"
+              ]
+            },
+            {
+              "pairId": "yhsk-p07-s55",
+              "original": "二里，蹑其巅，则三面拔立坞中，其下森峰列岫，自石笋、接引两坞，迤逦至此，环结又成一胜。",
+              "translation": "走了二里路，踩着山路登上它的顶巅，只见它三面孤立地拔起在山谷之中，下方峰峦密布、山岫罗列，从石笋矼、接引崖两个山谷曲折绵延到这里，环绕凝聚又成了一处绝景。",
+              "keywords": [
+                "森峰列岫"
+              ]
+            },
+            {
+              "pairId": "yhsk-p07-s56",
+              "original": "登眺间，沉雾渐爽，急由石笋矼北转而下，正昨日峰头所望森阴径也。",
+              "translation": "在登高远眺时，浓重的雾气渐渐散去变得清爽，我们急忙从石笋矼向北转弯而下，正对应着昨天在峰顶上所望见的幽深阴暗的小径。",
+              "keywords": [
+                "森阴径"
+              ]
+            },
+            {
+              "pairId": "yhsk-p07-s57",
+              "original": "群峰或上或下，或巨或纤，或直或欹，与身穿绕而过，俯窥辗顾，步步生奇，但壑深雪厚，一步一悚。",
+              "translation": "群峰有的向上高耸、有的向下低垂，有的巨大、有的纤细，有的笔直、有的倾斜，随着我的身形穿行绕过，俯瞰和回头顾盼之间，真是**步步都能产生奇景**，只是由于山谷深邃、积雪深厚，每走一步都让人心惊肉跳。",
+              "keywords": [
+                "步步生奇"
+              ]
+            },
+            {
+              "pairId": "yhsk-p07-s58",
+              "original": "行五里，左峰腋一窦透明，曰“天窗”。又前，峰旁一石突起，作面壁状，则“僧坐石”也。",
+              "translation": "走了五里路，左边山峰的腰部有一个岩洞通明透光，叫做**天窗**。再往前走，山峰旁有一块石头突兀拔起，呈现出面壁修行的坐姿，这就是**僧坐石**。",
+              "keywords": [
+                "天窗",
+                "僧坐石"
+              ]
+            },
+            {
+              "pairId": "yhsk-p07-s59",
+              "original": "下五里，径稍夷，循涧而行。忽前涧乱石纵横，路为之塞。越石久之，一阙新崩，片片欲堕，始得路。",
+              "translation": "再往下走五里，山路稍微平缓了一些，顺着山涧前行。忽然前方山涧里乱石纵横堆叠，道路因此被堵塞。翻越乱石走了很久，看到一处新崩塌的缺口，石片片片欲坠，才终于找到了路。",
+              "keywords": [
+                "乱石纵横"
+              ]
+            },
+            {
+              "pairId": "yhsk-p07-s60",
+              "original": "仰视峰顶，黄痕一方，中间绿字，宛然可辨，是谓“天牌”，亦谓“仙人榜”。",
+              "translation": "抬头仰望山峰顶部，有一块方形的黄色痕迹，中间隐约有绿色的字迹清晰可辨，这被称为**天牌**，也被称为**仙人榜**。",
+              "keywords": [
+                "天牌",
+                "仙人榜"
+              ]
+            },
+            {
+              "pairId": "yhsk-p07-s61",
+              "original": "又前，鲤鱼石；又前，白龙池；共十五里。一茅出涧边，为松谷庵旧基。",
+              "translation": "再往前走，是鲤鱼石；再往前，是白龙池；总共走了十五里。一间茅草屋出现在山涧边，这里是**松谷庵**的旧遗址。",
+              "keywords": [
+                "松谷庵"
+              ]
+            },
+            {
+              "pairId": "yhsk-p07-s62",
+              "original": "再五里，循溪东西行，又过五水，则松谷庵矣。再循溪下，溪边香气袭人，则一梅亭亭正发，山寒稽雪，至是始芳！",
+              "translation": "再前行五里，顺着溪流忽东忽西地行进，又趟过了五条溪水，便到达了松谷庵。再次顺着溪流向下走，溪流边有一阵阵香气扑鼻而来，只见一株梅树正亭亭玉立地傲然绽放，山中因为寒冷而积雪消融得晚，走到这里才终于看到了**芬芳的春意**！",
+              "keywords": [
+                "梅",
+                "始芳"
+              ]
+            },
+            {
+              "pairId": "yhsk-p07-s63",
+              "original": "抵青龙潭，一泓深碧，更会两溪，比白龙潭势既雄壮，而大石磊落，奔流乱注，远近群峰环拱，亦佳境也。",
+              "translation": "抵达**青龙潭**，只见一汪深碧色的潭水，这里更是汇合了两条溪流，比起白龙潭来说，气势既显得雄伟壮阔，而且潭边巨石错落，溪水奔腾着四处乱注，远近的重重山峰在四周环绕拱卫，也是一处极佳的胜境。",
+              "keywords": [
+                "青龙潭"
+              ]
+            },
+            {
+              "pairId": "yhsk-p07-s64",
+              "original": "还餐松谷，往宿旧庵。余初至松谷，疑已平地，及是询之，须下岭二重，二十里方得平地，至太平县共三十五里云。",
+              "translation": "我们回到松谷庵吃了饭，前往旧庵堂住宿。我刚到松谷的时候，怀疑这里已经是平地了，等到这时向人打听，才知道还需要再走下两重山岭、走上二十里路才能到达平地，到**太平县**城总共还有三十五里路。",
+              "keywords": [
+                "太平县",
+                "三十五里"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yhsk-part-08",
+      "heading": "初八日：暴雨突至，迷失浓雾借宿",
+      "paragraphs": [
+        {
+          "id": "yhsk-p08",
+          "scene": "浓雾迷途",
+          "shareImage": "/content/assets/you-huangshan-riji/images/3-4.jpg",
+          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-snow.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
+            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
+            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
+            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yhsk-p08-s65",
+              "original": "初八日 拟寻石笋奥境，竟为天夺，浓雾迷漫。抵狮子林，风愈大，雾亦愈厚。",
+              "translation": "二月初八这一天，我原本打算去寻找石笋矼更幽深的秘境，竟然被天意剥夺了，一路上**浓雾弥漫**。等赶到狮子林时，山风越来越大，大雾也越来越浓厚。",
+              "keywords": [
+                "浓雾迷漫"
+              ]
+            },
+            {
+              "pairId": "yhsk-p08-s66",
+              "original": "余急欲趋炼丹台，遂转西南。三里，为雾所迷；偶得一庵，入焉。雨大至，遂宿此。",
+              "translation": "我急切地想要赶往**炼丹台**，于是转身向西南方向前进。走了三里路，被大雾迷失了方向；偶然间发现了一座庵堂，便走了进去。随后大雨倾盆而至，于是我们就在这里住宿。",
+              "keywords": [
+                "炼丹台"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yhsk-part-09",
+      "heading": "初九日：午后初霁，观翠微丹台诸坞",
+      "paragraphs": [
+        {
+          "id": "yhsk-p09",
+          "scene": "翠微丹台",
+          "shareImage": "/content/assets/you-huangshan-riji/images/3-4.jpg",
+          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-mountain.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
+            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
+            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
+            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yhsk-p09-s67",
+              "original": "初九日 逾午少霁。庵僧慈明甚夸西南一带峰岫，不减石笋矼，有“秃颅朝天”、“达摩面壁”诸名。",
+              "translation": "二月初九这一天，过了中午天气稍微放晴。庵里的和尚**慈明**非常夸赞西南一带的山峰和山峦，说它们不亚于石笋矼，还有**秃颅朝天**、**达摩面壁**等诸般名称。",
+              "keywords": [
+                "慈明",
+                "秃颅朝天",
+                "达摩面壁"
+              ]
+            },
+            {
+              "pairId": "yhsk-p09-s68",
+              "original": "余拉浔阳蹈乱流至壑中，北向即翠微诸峦，南向即丹台诸坞，大抵可与狮峰竞驾，未得比肩石笋也。",
+              "translation": "我便拉着朋友浔阳踩着乱流下到山谷之中，向北望去就是**翠微峰**等重重山峦，向南望去就是炼丹台的各个山谷。大体上这里的景观可以与狮子峰并驾齐驱，但还无法与石笋矼相提并论。",
+              "keywords": [
+                "翠微峰",
+                "丹台"
+              ]
+            },
+            {
+              "pairId": "yhsk-p09-s69",
+              "original": "雨踵至，急返庵。",
+              "translation": "紧接着大雨又接踵而至，我们急忙返回了庵堂。",
+              "keywords": [
+                "雨踵至"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yhsk-part-10",
+      "heading": "初十日：雨中攀炼丹台，过天门宿悟空庵",
+      "paragraphs": [
+        {
+          "id": "yhsk-p10",
+          "scene": "雨中炼丹台",
+          "shareImage": "/content/assets/you-huangshan-riji/images/3-4.jpg",
+          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-stream.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
+            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
+            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
+            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yhsk-p10-s70",
+              "original": "初十日 晨，雨如注，午少停。策杖二里，过飞来峰，此平天矼之西北岭也。",
+              "translation": "二月初十这一天，早晨大雨如注，到了中午稍微停歇。我拄着竹杖走了二里路，路过**飞来峰**，这里是平天矼的西北面山岭。",
+              "keywords": [
+                "飞来峰"
+              ]
+            },
+            {
+              "pairId": "yhsk-p10-s71",
+              "original": "其阳坞中，峰壁森峭，正与丹台环绕。二里抵台。一峰西垂，顶颇平伏。三面壁翠合沓，前一小峰起坞中，其外则翠微峰、三海门蹄股拱峙，登眺久之。",
+              "translation": "飞来峰的向阳山谷之中，峰峦与绝壁密布峭拔，正好与**炼丹台**相互环绕。又走了二里路抵达炼丹台，只见有一座山峰向西低垂，山顶相当平坦低伏。三面的绝壁上苍翠的树木重叠郁茂，前方有一座小山峰在山谷中拔起，外围则是翠微峰、三海门如蹄股般拱卫耸立，我们在那里登高远眺了很久。",
+              "keywords": [
+                "炼丹台",
+                "三海门"
+              ]
+            },
+            {
+              "pairId": "yhsk-p10-s72",
+              "original": "东南一里，绕出平天矼下，雨复大至，急下天门。两崖隘肩，崖额飞泉，俱从人顶泼下。",
+              "translation": "随后向东南方向走了一里路，绕到了平天矼的下方，此时大雨又铺天盖地而来，我们急忙奔下**天门**。天门的两面悬崖狭窄得只能容下肩膀通过，悬崖顶上的飞流泉水，全都从人的头顶上泼洒下来。",
+              "keywords": [
+                "天门"
+              ]
+            },
+            {
+              "pairId": "yhsk-p10-s73",
+              "original": "出天门，危崖悬叠，路缘崖半，比后海一带森峰峭壁，又转一境。",
+              "translation": "走出天门，高耸的悬崖层层悬挂堆叠，山路顺着悬崖的中部延伸，比起后海一带的密峰峭壁来说，这里又转为了另一番境界。",
+              "keywords": [
+                "危崖悬叠"
+              ]
+            },
+            {
+              "pairId": "yhsk-p10-s74",
+              "original": "“海螺石”即在崖旁，宛转酷肖，来时忽不及察，今行雨中，颇稔其异，询之始知。",
+              "translation": "**海螺石**就在悬崖旁边，形状宛转，酷似一只海螺，来的时候由于匆忙没来得及察看，今天在雨中行走，非常熟知了它的奇特，向人打听后才证实。",
+              "keywords": [
+                "海螺石"
+              ]
+            },
+            {
+              "pairId": "yhsk-p10-s75",
+              "original": "已趋大悲庵，由其旁复趋一庵，宿悟空上人处。",
+              "translation": "随后我们奔赴大悲庵，又从大悲庵旁边前往另一座庵堂，在**悟空上人**这里借宿。",
+              "keywords": [
+                "大悲庵",
+                "悟空上人"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yhsk-part-11",
+      "heading": "十一日：再上百步云梯，大雨不止下黄山",
+      "paragraphs": [
+        {
+          "id": "yhsk-p11",
+          "scene": "百步云梯",
+          "shareImage": "/content/assets/you-huangshan-riji/images/3-4.jpg",
+          "ambientAudio": "/content/assets/you-huangshan-riji/audio/ambient-mountain.wav",
+          "voiceAudio": {
+            "male_classic": "/content/assets/you-huangshan-riji/audio/yhsk-male-classic.wav",
+            "female_classic": "/content/assets/you-huangshan-riji/audio/yhsk-female-classic.wav",
+            "male_calm": "/content/assets/you-huangshan-riji/audio/yhsk-male-calm.wav",
+            "female_warm": "/content/assets/you-huangshan-riji/audio/yhsk-female-warm.wav"
+          },
+          "pairs": [
+            {
+              "pairId": "yhsk-p11-s76",
+              "original": "十一日 上百步云梯。梯磴插天，足趾及腮，而磴石倾侧.岈，兀兀欲动；前下时以雪掩其险，至此骨意俱悚。",
+              "translation": "二月十一日这一天，我们攀登**百步云梯**。云梯的石阶直插云霄，陡峭得让人的脚趾几乎能碰到面腮，而且石阶的石头倾斜开裂，摇摇欲坠。之前下山时因为有积雪掩盖了它的险要，今天来到这里，真是让人连骨子里都感到**恐惧悚然**。",
+              "keywords": [
+                "百步云梯"
+              ]
+            },
+            {
+              "pairId": "yhsk-p11-s77",
+              "original": "上云梯，即登莲花峰道。又下转，由峰侧而入，即文殊院、莲花洞道也。",
+              "translation": "登上云梯后，就是登上**莲花峰**的通道。随后又向下转弯，从山峰的侧面走进去，就是前往**文殊院**和莲花洞的通道了。",
+              "keywords": [
+                "莲花峰",
+                "文殊院"
+              ]
+            },
+            {
+              "pairId": "yhsk-p11-s78",
+              "original": "以雨不止，乃下山，入汤院，复浴。",
+              "translation": "因为大雨连绵不止，我们于是决定下山，进入汤院，再次洗了温泉澡。",
+              "keywords": [
+                "汤院"
+              ]
+            },
+            {
+              "pairId": "yhsk-p11-s79",
+              "original": "由汤口出，二十里，抵芳村；十五里，抵东潭，溪涨不能渡而止。",
+              "translation": "我们从汤口走出来，行走了二十里，抵达**芳村**；又走了十五里，抵达**东潭**，此时溪水暴涨导致无法渡河，我们只好停下脚步。",
+              "keywords": [
+                "芳村",
+                "东潭"
+              ]
+            },
+            {
+              "pairId": "yhsk-p11-s80",
+              "original": "黄山之流，如松谷、焦村，俱北出太平；即南流如汤口，亦北转太平入江；惟汤口西有流，至芳村而巨，南趋岩镇，至府西北与绩溪会。",
+              "translation": "黄山的水流，比如松谷、焦村的溪水，全都是向北流出太平县；就算是向南流的如汤口的水，最终也是向北绕道太平县汇入长江；唯独汤口西面有一条河流，流到芳村时水势变得巨大，随后向南奔赴**岩镇**，到了徽州府城的西北方向与**绩溪**汇合。",
+              "keywords": [
+                "岩镇",
+                "绩溪"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

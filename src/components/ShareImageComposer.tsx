@@ -30,84 +30,93 @@ async function drawShareImage(
   canvas: HTMLCanvasElement,
   selectedPassage: SelectedPassage,
 ): Promise<string> {
-  const context = canvas.getContext("2d");
-  if (!context) {
+  const ctx = canvas.getContext("2d");
+  if (!ctx) {
     throw new Error("Canvas not supported");
   }
 
-  canvas.width = 1200;
-  canvas.height = 1600;
+  const W = 1200;
+  const H = 1600;
 
+  canvas.width = W;
+  canvas.height = H;
+
+  // 1. Draw image — full canvas cover
   const image = new Image();
   image.crossOrigin = "anonymous";
-  const imageLoaded = new Promise<void>((resolve) => {
+  await new Promise<void>((resolve) => {
     image.onload = () => resolve();
     image.onerror = () => resolve();
+    image.src = assetUrl(selectedPassage.shareImage);
   });
-  image.src = assetUrl(selectedPassage.shareImage);
-  await imageLoaded;
 
-  context.fillStyle = "#f7f3e8";
-  context.fillRect(0, 0, canvas.width, canvas.height);
   if (image.complete && image.naturalWidth > 0) {
-    context.drawImage(image, 0, 0, canvas.width, 720);
+    const { naturalWidth: iw, naturalHeight: ih } = image;
+    const ir = iw / ih;
+    const cr = W / H;
+    let sx = 0, sy = 0, sw = iw, sh = ih;
+    if (ir > cr) {
+      sw = ih * cr;
+      sx = (iw - sw) / 2;
+    } else {
+      sh = iw / cr;
+      sy = (ih - sh) / 2;
+    }
+    ctx.drawImage(image, sx, sy, sw, sh, 0, 0, W, H);
   }
 
-  const gradient = context.createLinearGradient(0, 540, 0, 1600);
-  gradient.addColorStop(0, "rgba(247, 243, 232, 0.18)");
-  gradient.addColorStop(0.25, "rgba(247, 243, 232, 0.95)");
-  gradient.addColorStop(1, "#f7f3e8");
-  context.fillStyle = gradient;
-  context.fillRect(0, 520, canvas.width, 1080);
+  // 2. Text panel — gradient from image into dark backdrop
+  const panelY = H * 0.54;
+  const grad = ctx.createLinearGradient(0, panelY, 0, H);
+  grad.addColorStop(0,   "rgba(0, 0, 0, 0)");
+  grad.addColorStop(0.15,"rgba(0, 0, 0, 0.4)");
+  grad.addColorStop(0.4, "rgba(0, 0, 0, 0.58)");
+  grad.addColorStop(1,   "rgba(0, 0, 0, 0.7)");
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, panelY, W, H - panelY);
 
-  context.fillStyle = "#9b3428";
-  context.font = "30px sans-serif";
-  context.fillText(selectedPassage.scene, 96, 710);
+  // 3. Layout constants
+  const M = 130;                      // side margin
+  const TW = W - M * 2;               // text width (940px)
+  const blockH = 520;                 // text block height
+  const top = H - 90 - blockH;        // block top (990)
 
-  context.fillStyle = "#17201c";
-  context.font = "700 54px serif";
-  context.fillText(selectedPassage.articleTitle, 96, 790);
+  // ---- “《徐霞客游记》” ----
+  ctx.fillStyle = "rgba(212, 184, 136, 0.7)";
+  ctx.font = "22px sans-serif";
+  ctx.fillText("《徐霞客游记》", M, top);
 
-  context.fillStyle = "#465149";
-  context.font = "28px sans-serif";
-  context.fillText(`《徐霞客游记》 · ${selectedPassage.partHeading}`, 96, 846);
+  // ---- Article title ----
+  ctx.fillStyle = "#ffffff";
+  ctx.font = "700 46px serif";
+  ctx.fillText(selectedPassage.articleTitle, M, top + 52);
 
-  const textLabel = selectedPassage.source === "original" ? "原文" : "译文";
-  const counterpartLabel = selectedPassage.source === "original" ? "译文" : "原文";
+  // ---- Divider ----
+  const divY = top + 80;
+  ctx.strokeStyle = "rgba(212, 184, 136, 0.35)";
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(M, divY);
+  ctx.lineTo(W - M, divY);
+  ctx.stroke();
 
-  context.fillStyle = "#17201c";
-  context.font = "700 32px sans-serif";
-  context.fillText(`【${textLabel}】`, 96, 945);
-
-  context.font = "42px serif";
-  const primaryLines = wrapText(context, selectedPassage.text, 1008).slice(0, 7);
-  primaryLines.forEach((line, index) => {
-    context.fillText(line, 96, 1015 + index * 58);
+  // ---- Original text ----
+  const origTop = divY + 40;
+  ctx.font = "34px serif";
+  const origLines = wrapText(ctx, selectedPassage.text, TW).slice(0, 5);
+  ctx.fillStyle = "rgba(255, 255, 255, 0.93)";
+  origLines.forEach((line, i) => {
+    ctx.fillText(line, M, origTop + i * 48);
   });
 
-  const counterpartTop = 1048 + primaryLines.length * 58;
-  context.fillStyle = "#9b3428";
-  context.font = "700 30px sans-serif";
-  context.fillText(`【${counterpartLabel}】`, 96, counterpartTop);
-
-  context.fillStyle = "#2f3b35";
-  context.font = "32px sans-serif";
-  const counterpartLines = wrapText(context, selectedPassage.counterpart, 1008).slice(0, 6);
-  counterpartLines.forEach((line, index) => {
-    context.fillText(line, 96, counterpartTop + 58 + index * 48);
+  // ---- Translation text ----
+  const transTop = origTop + origLines.length * 48 + 30;
+  ctx.font = "26px sans-serif";
+  const transLines = wrapText(ctx, selectedPassage.counterpart, TW).slice(0, 5);
+  ctx.fillStyle = "rgba(255, 255, 255, 0.68)";
+  transLines.forEach((line, i) => {
+    ctx.fillText(line, M, transTop + i * 38);
   });
-
-  context.strokeStyle = "rgba(23, 32, 28, 0.16)";
-  context.lineWidth = 2;
-  context.beginPath();
-  context.moveTo(96, 1470);
-  context.lineTo(1104, 1470);
-  context.stroke();
-
-  context.fillStyle = "#465149";
-  context.font = "26px sans-serif";
-  context.fillText("Journey of Xu · 句级对照阅读", 96, 1532);
-  context.fillText(selectedPassage.pairId, 890, 1532);
 
   return canvas.toDataURL("image/png");
 }
@@ -119,7 +128,7 @@ export function ShareImageComposer({ selectedPassage }: ShareImageComposerProps)
 
   useEffect(() => {
     setImageUrl(null);
-  }, [selectedPassage?.pairId, selectedPassage?.text]);
+  }, [selectedPassage?.pairIds, selectedPassage?.text]);
 
   async function renderImage() {
     if (!selectedPassage || !canvasRef.current) {
@@ -150,7 +159,7 @@ export function ShareImageComposer({ selectedPassage }: ShareImageComposerProps)
               <span>{isRendering ? "生成中" : "生成图片"}</span>
             </button>
             {imageUrl ? (
-              <a href={imageUrl} download={`${selectedPassage.pairId}.png`}>
+              <a href={imageUrl} download={`${selectedPassage.pairIds[0]}.png`}>
                 <Download size={17} />
                 <span>下载</span>
               </a>
