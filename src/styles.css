@@ -154,38 +154,47 @@ button {
   grid-template-columns: 0 minmax(0, 1fr) minmax(260px, 300px);
 }
 
-.workspace.reader-mode.catalog-visible {
-  grid-template-columns: minmax(220px, 260px) minmax(0, 1fr) minmax(260px, 300px);
-}
-
 .workspace.home-mode {
   grid-template-columns: 0 minmax(0, 1100px);
   justify-content: center;
 }
 
-.workspace.home-mode.catalog-visible {
-  grid-template-columns: minmax(220px, 260px) minmax(0, 920px);
-  justify-content: center;
-}
-
 /* ========== 目录面板 ========== */
 
-.catalog-panel {
-  position: sticky;
-  top: 88px;
-  overflow: hidden;
-  width: 0;
-  max-height: calc(100vh - 112px);
+.catalog-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 24;
+  background: rgba(0, 0, 0, 0.2);
   opacity: 0;
   pointer-events: none;
-  transition:
-    width 200ms ease,
-    opacity 200ms ease;
+  transition: opacity 200ms ease;
+}
+
+.catalog-backdrop.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.catalog-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 25;
+  overflow: hidden auto;
+  width: 280px;
+  max-width: 85vw;
+  padding: 32px 24px 24px;
+  background: var(--color-bg);
+  border-right: 1px solid var(--color-border);
+  transform: translateX(-100%);
+  pointer-events: none;
+  transition: transform 240ms ease;
 }
 
 .catalog-panel.open {
-  width: auto;
-  opacity: 1;
+  transform: translateX(0);
   pointer-events: auto;
 }
 
@@ -850,23 +859,10 @@ button {
 
 @media (max-width: 1180px) {
   .workspace.reader-mode,
-  .workspace.reader-mode.catalog-visible,
-  .workspace.home-mode,
-  .workspace.home-mode.catalog-visible {
+  .workspace.home-mode {
     grid-template-columns: minmax(0, 1fr);
     justify-content: stretch;
     gap: 32px;
-  }
-
-  .catalog-panel {
-    position: static;
-    width: auto;
-    max-height: none;
-    display: none;
-  }
-
-  .catalog-panel.open {
-    display: block;
   }
 
   .volume-list {

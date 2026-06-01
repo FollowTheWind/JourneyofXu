@@ -188,9 +188,7 @@ export default function App() {
     setHighlightedPairIds(new Set());
     window.location.hash = articleHash(articleId);
     window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "smooth" }));
-    if (window.innerWidth < 920) {
-      setIsCatalogOpen(false);
-    }
+    setIsCatalogOpen(false);
   }, []);
 
   const handleHomeSelect = useCallback(() => {
@@ -242,10 +240,9 @@ export default function App() {
       {error ? <div className="error-banner">{error}</div> : null}
 
       <div
-        className={`workspace ${activeArticleId ? "reader-mode" : "home-mode"} ${
-          isCatalogOpen ? "catalog-visible" : ""
-        }`}
+        className={`workspace ${activeArticleId ? "reader-mode" : "home-mode"}`}
       >
+        <div className={`catalog-backdrop ${isCatalogOpen ? "visible" : ""}`} onClick={() => setIsCatalogOpen(false)} />
         {catalog ? (
           <CatalogPanel
             catalog={catalog}
