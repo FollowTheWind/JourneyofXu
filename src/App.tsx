@@ -289,6 +289,13 @@ export default function App() {
           </aside>
         ) : null}
       </div>
+
+      {activeArticleId ? (
+        <div className={`mobile-share-sheet ${selectedPassage ? "open" : ""}`}>
+          <div className="sheet-handle" role="button" tabIndex={0} onClick={() => setSelectedPassage(null)} onKeyDown={(e) => { if (e.key === "Enter") setSelectedPassage(null); }} />
+          <ShareImageComposer selectedPassage={selectedPassage} />
+        </div>
+      ) : null}
     </main>
   );
 }
