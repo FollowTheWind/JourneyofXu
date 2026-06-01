@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Download, ImageDown } from "lucide-react";
+import { Download, ImageDown, Share2 } from "lucide-react";
 import { assetUrl } from "../content";
 import type { SelectedPassage } from "../types";
 
@@ -140,6 +140,23 @@ export function ShareImageComposer({ selectedPassage }: ShareImageComposerProps)
     setIsRendering(false);
   }
 
+  async function handleSave() {
+    if (!imageUrl || !selectedPassage) return;
+    const filename = `${selectedPassage.pairIds[0]}.png`;
+
+    if (navigator.share && /iPhone|iPad|iPod/.test(navigator.userAgent)) {
+      const res = await fetch(imageUrl);
+      const blob = await res.blob();
+      const file = new File([blob], filename, { type: "image/png" });
+      await navigator.share({ files: [file] });
+    } else {
+      const a = document.createElement("a");
+      a.href = imageUrl;
+      a.download = filename;
+      a.click();
+    }
+  }
+
   return (
     <section className="tool-card share-card">
       <div className="tool-card-head">
@@ -159,10 +176,10 @@ export function ShareImageComposer({ selectedPassage }: ShareImageComposerProps)
               <span>{isRendering ? "生成中" : "生成图片"}</span>
             </button>
             {imageUrl ? (
-              <a href={imageUrl} download={`${selectedPassage.pairIds[0]}.png`}>
-                <Download size={17} />
-                <span>下载</span>
-              </a>
+              <button type="button" onClick={handleSave}>
+                {/iPhone|iPad|iPod/.test(navigator.userAgent) ? <Share2 size={17} /> : <Download size={17} />}
+                <span>保存图片</span>
+              </button>
             ) : null}
           </div>
           {imageUrl ? <img className="share-preview" src={imageUrl} alt="分享图片预览" /> : null}
