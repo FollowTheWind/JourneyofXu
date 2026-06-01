@@ -243,52 +243,27 @@ button {
 
 .volume-list {
   overflow: auto;
-  max-height: calc(100vh - 280px);
+  max-height: calc(100vh - 180px);
   margin-top: 8px;
   padding-right: 4px;
-}
-
-.volume-group {
-  padding: 20px 0;
-  border-top: 1px solid var(--color-border);
-}
-
-.volume-group:first-child {
-  border-top: 0;
-}
-
-.volume-group h3 {
-  margin: 0 0 6px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--color-ink);
-}
-
-.volume-group p {
-  margin: 0 0 14px;
-  color: var(--color-text-muted);
-  font-size: 12px;
-  line-height: 1.7;
-}
-
-.article-list {
-  display: grid;
-  gap: 2px;
 }
 
 .article-link {
   display: grid;
   gap: 4px;
   width: 100%;
-  padding: 10px 12px;
-  margin: 0 -12px;
-  border-radius: var(--radius-md);
+  padding: 16px 12px;
+  border-top: 1px solid var(--color-border);
+  border-radius: 0;
   color: var(--color-ink);
   text-align: left;
   background: transparent;
   cursor: pointer;
   transition: background 160ms ease;
+}
+
+.article-link:first-child {
+  border-top: 0;
 }
 
 .article-link:hover {
