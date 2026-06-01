@@ -77,7 +77,7 @@ async function drawShareImage(
   ctx.fillRect(0, panelY, W, H - panelY);
 
   // 3. Layout constants
-  const M = 130;                      // side margin
+  const M = 64;                      // side margin
   const TW = W - M * 2;               // text width (940px)
   const blockH = 520;                 // text block height
   const top = H - 90 - blockH;        // block top (990)
@@ -130,6 +130,7 @@ export function ShareImageComposer({ selectedPassage, onDismiss }: ShareImageCom
 
   useEffect(() => {
     setImageUrl(null);
+    setSaved(false);
   }, [selectedPassage?.pairIds, selectedPassage?.text]);
 
   async function renderImage() {
