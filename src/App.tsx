@@ -215,6 +215,11 @@ export default function App() {
     [article],
   );
 
+  const clearSelection = useCallback(() => {
+    setSelectedPassage(null);
+    setHighlightedPairIds(new Set());
+  }, []);
+
   return (
     <main className="app-shell">
       {activeArticleId ? (
@@ -285,15 +290,15 @@ export default function App() {
               <ChevronLeft size={17} />
               返回首页
             </button>
-            <ShareImageComposer selectedPassage={selectedPassage} />
+            <ShareImageComposer selectedPassage={selectedPassage} onDismiss={clearSelection} />
           </aside>
         ) : null}
       </div>
 
       {activeArticleId ? (
         <div className={`mobile-share-sheet ${selectedPassage ? "open" : ""}`}>
-          <div className="sheet-handle" role="button" tabIndex={0} onClick={() => setSelectedPassage(null)} onKeyDown={(e) => { if (e.key === "Enter") setSelectedPassage(null); }} />
-          <ShareImageComposer selectedPassage={selectedPassage} />
+          <div className="sheet-handle" role="button" tabIndex={0} onClick={clearSelection} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); clearSelection(); } }} />
+          <ShareImageComposer selectedPassage={selectedPassage} onDismiss={clearSelection} />
         </div>
       ) : null}
     </main>

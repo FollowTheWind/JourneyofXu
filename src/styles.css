@@ -759,13 +759,24 @@ button {
   display: -webkit-box;
   overflow: hidden;
   margin: 0 0 16px;
-  padding-left: 12px;
-  border-left: 2px solid var(--color-border-strong);
+  padding-left: 0;
+  border-left: none;
   color: var(--color-text);
   font-size: 13px;
   line-height: 1.85;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
+}
+
+.save-toast {
+  display: inline-flex;
+  align-items: center;
+  height: 34px;
+  padding: 0 16px;
+  border-radius: var(--radius-md);
+  background: #16a34a;
+  color: #fff;
+  font-size: 13px;
 }
 
 .share-actions {

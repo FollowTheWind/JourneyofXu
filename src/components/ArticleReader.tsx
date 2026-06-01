@@ -149,7 +149,11 @@ export function ArticleReader({
     // 单击：需要知道点击了哪个句子
     const target = event.target as HTMLElement;
     const sentenceEl = target.closest<HTMLElement>("[data-pair-id]");
-    if (!sentenceEl) return;
+    if (!sentenceEl) {
+      onPairFocus(new Set());
+      onSelectionChange(null);
+      return;
+    }
 
     const pairId = sentenceEl.dataset.pairId!;
     const type = (sentenceEl.dataset.type ?? "original") as "original" | "translation";

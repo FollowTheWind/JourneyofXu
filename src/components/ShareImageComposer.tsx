@@ -5,6 +5,7 @@ import type { SelectedPassage } from "../types";
 
 interface ShareImageComposerProps {
   selectedPassage: SelectedPassage | null;
+  onDismiss: () => void;
 }
 
 function wrapText(context: CanvasRenderingContext2D, text: string, maxWidth: number) {
@@ -121,10 +122,11 @@ async function drawShareImage(
   return canvas.toDataURL("image/png");
 }
 
-export function ShareImageComposer({ selectedPassage }: ShareImageComposerProps) {
+export function ShareImageComposer({ selectedPassage, onDismiss }: ShareImageComposerProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [isRendering, setIsRendering] = useState(false);
+  const [saved, setSaved] = useState(false);
 
   useEffect(() => {
     setImageUrl(null);
@@ -148,13 +150,20 @@ export function ShareImageComposer({ selectedPassage }: ShareImageComposerProps)
       const res = await fetch(imageUrl);
       const blob = await res.blob();
       const file = new File([blob], filename, { type: "image/png" });
-      await navigator.share({ files: [file] });
+      try {
+        await navigator.share({ files: [file] });
+      } catch {
+        return; // user cancelled, don't dismiss
+      }
     } else {
       const a = document.createElement("a");
       a.href = imageUrl;
       a.download = filename;
       a.click();
     }
+
+    setSaved(true);
+    setTimeout(() => onDismiss(), 1500);
   }
 
   return (
@@ -164,23 +173,25 @@ export function ShareImageComposer({ selectedPassage }: ShareImageComposerProps)
           <p className="eyebrow">分享图</p>
           <h2>{selectedPassage ? selectedPassage.scene : "选中文字生成"}</h2>
         </div>
-        <ImageDown size={21} />
       </div>
 
       {selectedPassage ? (
         <>
           <p className="selected-text">{selectedPassage.text}</p>
           <div className="share-actions">
-            <button type="button" onClick={renderImage} disabled={isRendering}>
-              <ImageDown size={17} />
-              <span>{isRendering ? "生成中" : "生成图片"}</span>
-            </button>
-            {imageUrl ? (
+            {!imageUrl ? (
+              <button type="button" onClick={renderImage} disabled={isRendering}>
+                <ImageDown size={17} />
+                <span>{isRendering ? "生成中" : "生成图片"}</span>
+              </button>
+            ) : null}
+            {imageUrl && !saved ? (
               <button type="button" onClick={handleSave}>
                 {/iPhone|iPad|iPod/.test(navigator.userAgent) ? <Share2 size={17} /> : <Download size={17} />}
                 <span>保存图片</span>
               </button>
             ) : null}
+            {saved ? <span className="save-toast">已保存</span> : null}
           </div>
           {imageUrl ? <img className="share-preview" src={imageUrl} alt="分享图片预览" /> : null}
         </>
