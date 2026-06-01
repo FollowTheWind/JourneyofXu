@@ -3,6 +3,7 @@ import {
   ArrowRight,
   BookOpen,
   ChevronLeft,
+  ImageDown,
   Menu,
   PanelLeftClose,
 } from "lucide-react";
@@ -120,6 +121,7 @@ export default function App() {
   const [mode, setMode] = useState<ReadingMode>("parallel");
   const [fontScale, setFontScale] = useState(1);
   const [selectedPassage, setSelectedPassage] = useState<SelectedPassage | null>(null);
+  const [isShareSheetOpen, setIsShareSheetOpen] = useState(false);
   const [isCatalogOpen, setIsCatalogOpen] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -186,6 +188,8 @@ export default function App() {
   const handleArticleSelect = useCallback((articleId: string) => {
     setActiveArticleId(articleId);
     setHighlightedPairIds(new Set());
+    setSelectedPassage(null);
+    setIsShareSheetOpen(false);
     window.location.hash = articleHash(articleId);
     window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "smooth" }));
     setIsCatalogOpen(false);
@@ -216,6 +220,7 @@ export default function App() {
   const clearSelection = useCallback(() => {
     setSelectedPassage(null);
     setHighlightedPairIds(new Set());
+    setIsShareSheetOpen(false);
   }, []);
 
   return (
@@ -271,7 +276,10 @@ export default function App() {
               mode={mode}
               fontScale={fontScale}
               onPairFocus={handlePairFocus}
-              onSelectionChange={setSelectedPassage}
+              onSelectionChange={(passage) => {
+                setSelectedPassage(passage);
+                setIsShareSheetOpen(false);
+              }}
             />
           ) : (
             <div className="loading-state">
@@ -292,8 +300,19 @@ export default function App() {
         ) : null}
       </div>
 
+      {activeArticleId && selectedPassage && !isShareSheetOpen ? (
+        <button
+          className="share-fab"
+          type="button"
+          onClick={() => setIsShareSheetOpen(true)}
+          aria-label="生成分享图"
+        >
+          <ImageDown size={22} />
+        </button>
+      ) : null}
+
       {activeArticleId ? (
-        <div className={`mobile-share-sheet ${selectedPassage ? "open" : ""}`}>
+        <div className={`mobile-share-sheet ${selectedPassage && isShareSheetOpen ? "open" : ""}`}>
           <div className="sheet-handle" role="button" tabIndex={0} onClick={clearSelection} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); clearSelection(); } }} />
           <ShareImageComposer selectedPassage={selectedPassage} onDismiss={clearSelection} />
         </div>

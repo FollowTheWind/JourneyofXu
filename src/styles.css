@@ -998,6 +998,10 @@ button {
   display: none;
 }
 
+.share-fab {
+  display: none;
+}
+
 @media (max-width: 760px) {
   .mobile-share-sheet {
     display: block;
@@ -1028,5 +1032,32 @@ button {
     border-radius: 2px;
     margin: 0 auto 12px;
     cursor: pointer;
+  }
+
+  .share-fab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 18px;
+    bottom: 36px;
+    z-index: 28;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: opacity 200ms ease, transform 200ms ease;
+    animation: fab-in 240ms ease;
+  }
+
+  @keyframes fab-in {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
   }
 }
