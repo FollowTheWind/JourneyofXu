@@ -167,38 +167,34 @@ export function ShareImageComposer({ selectedPassage, onDismiss }: ShareImageCom
     setTimeout(() => onDismiss(), 1500);
   }
 
+  if (!selectedPassage) return null;
+
   return (
     <section className="tool-card share-card">
       <div className="tool-card-head">
         <div>
           <p className="eyebrow">分享图</p>
-          <h2>{selectedPassage ? selectedPassage.scene : "选中文字生成"}</h2>
+          <h2>{selectedPassage.scene}</h2>
         </div>
       </div>
 
-      {selectedPassage ? (
-        <>
-          <p className="selected-text">{selectedPassage.text}</p>
-          <div className="share-actions">
-            {!imageUrl ? (
-              <button type="button" onClick={renderImage} disabled={isRendering}>
-                <ImageDown size={17} />
-                <span>{isRendering ? "生成中" : "生成图片"}</span>
-              </button>
-            ) : null}
-            {imageUrl && !saved ? (
-              <button type="button" onClick={handleSave}>
-                {/iPhone|iPad|iPod/.test(navigator.userAgent) ? <Share2 size={17} /> : <Download size={17} />}
-                <span>保存图片</span>
-              </button>
-            ) : null}
-            {saved ? <span className="save-toast">已保存</span> : null}
-          </div>
-          {imageUrl ? <img className="share-preview" src={imageUrl} alt="分享图片预览" /> : null}
-        </>
-      ) : (
-        <p className="muted-text">在原文或译文中点选一句，或拖选文字后，即可生成带背景画面的分享图片。</p>
-      )}
+      <p className="selected-text">{selectedPassage.text}</p>
+      <div className="share-actions">
+        {!imageUrl ? (
+          <button type="button" onClick={renderImage} disabled={isRendering}>
+            <ImageDown size={17} />
+            <span>{isRendering ? "生成中" : "生成图片"}</span>
+          </button>
+        ) : null}
+        {imageUrl && !saved ? (
+          <button type="button" onClick={handleSave}>
+            {/iPhone|iPad|iPod/.test(navigator.userAgent) ? <Share2 size={17} /> : <Download size={17} />}
+            <span>保存图片</span>
+          </button>
+        ) : null}
+        {saved ? <span className="save-toast">已保存</span> : null}
+      </div>
+      {imageUrl ? <img className="share-preview" src={imageUrl} alt="分享图片预览" /> : null}
       <canvas ref={canvasRef} className="hidden-canvas" aria-hidden="true" />
     </section>
   );
