@@ -1,4 +1,4 @@
-import type { CSSProperties, KeyboardEvent, MouseEvent } from "react";
+import { useRef, type CSSProperties, type KeyboardEvent, type PointerEvent } from "react";
 import type { Article, Paragraph, ReadingMode, SelectedPassage, TextPair } from "../types";
 import { formatInline } from "../textFormat";
 
@@ -95,15 +95,23 @@ export function ArticleReader({
   const showTranslation = mode !== "original";
   const readerStyle = { "--reader-scale": fontScale } as CSSProperties;
 
-  function handleMouseUp(event: MouseEvent<HTMLDivElement>) {
+  const pointerStart = useRef<{ x: number; y: number } | null>(null);
+  const SCROLL_THRESHOLD = 10;
+
+  function handlePointerDown(event: PointerEvent<HTMLDivElement>) {
+    pointerStart.current = { x: event.clientX, y: event.clientY };
+  }
+
+  function handlePointerUp(event: PointerEvent<HTMLDivElement>) {
+    const start = pointerStart.current;
+    pointerStart.current = null;
+
     const root = event.currentTarget;
     const selection = window.getSelection();
 
     if (!selection) return;
 
     if (!selection.isCollapsed) {
-      // 拖选：基于 Selection Range 处理，不依赖 mouseup 目标元素
-      // mouseup 目标可能是段落间距、标题等非句子元素，不应阻断有效选区
       const range = selection.getRangeAt(0);
       const { pairIds, source } = collectPairIdsInRange(range, root);
       if (pairIds.length === 0) return;
@@ -127,6 +135,15 @@ export function ArticleReader({
         source,
       });
       return;
+    }
+
+    // 判断是否为滚动：移动距离超过阈值且没有产生选区，视为滚动，不触发高亮
+    if (start) {
+      const dx = event.clientX - start.x;
+      const dy = event.clientY - start.y;
+      if (Math.abs(dx) > SCROLL_THRESHOLD || Math.abs(dy) > SCROLL_THRESHOLD) {
+        return;
+      }
     }
 
     // 单击：需要知道点击了哪个句子
@@ -154,7 +171,7 @@ export function ArticleReader({
   }
 
   return (
-    <article className="article-reader" style={readerStyle} onMouseUp={handleMouseUp}>
+    <article className="article-reader" style={readerStyle} onPointerDown={handlePointerDown} onPointerUp={handlePointerUp}>
       <div className="article-title-block">
         <p className="source-note">{article.sourceNote}</p>
         <h2>{article.title}</h2>
