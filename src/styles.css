@@ -196,6 +196,7 @@ button {
 .catalog-panel.open {
   transform: translateX(0);
   pointer-events: auto;
+  overscroll-behavior: contain;
 }
 
 .catalog-head {
